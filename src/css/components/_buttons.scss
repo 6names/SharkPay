@@ -1,8 +1,8 @@
-[class*="-button"] {
+[class*="-butn"] {
     position: relative;
     z-index: 5;
     display: block;
-    height: 30px;
+    height: 52px;
     padding: 0;
     margin: 0;
     font-size: 15px;
@@ -21,11 +21,20 @@
     }
 }
 
-label[class*="-button"],
-a[class*="-button"] {
+label[class*="-butn"],
+a[class*="-butn"] {
     line-height: 30px;
 
     &:hover {
         text-decoration: none;
+    }
+}
+
+.orange-butn {
+    background-color: $theme;
+    color: $white;
+    
+    &:hover {
+        background-color: $themeHover;
     }
 }

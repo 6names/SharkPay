@@ -32,9 +32,6 @@ gulp.task('serve', function (fn) {
     // svg
     gulp.watch('./src/images/svg/*.svg', ['svgstore']);
     gulp.watch('./src/images/ui/ui-icons.svg').on('change', browserSync.reload);
-    
-    // json
-    gulp.watch('./src/db/*.json').on('change', browserSync.reload);
 });
 
 // Import of all tasks

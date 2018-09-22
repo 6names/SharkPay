@@ -5,9 +5,28 @@
 @import "components/form-elements";
 @import "components/typical-elements";
 @import "components/header";
-@import "components/header";
 @import "components/mobile-header";
 @import "components/footer";
 @import "components/breadcrumbs";
-@import "components/modal";
+@import "components/hero";
+@import "components/payment-info";
+@import "components/cards";
+@import "components/platforms";
+@import "components/customers";
+@import "components/developer";
+@import "components/steps";
+@import "components/security";
+@import "components/dashboard";
+@import "components/technology";
+@import "components/sign-up";
+@import "components/pricing";
+@import "components/article";
+@import "components/faq";
+@import "components/tabs";
 @import "components/accordions";
+
+@media only screen and (max-width: 1400px) {
+    blockquote {
+        color: $white;
+    }   
+}

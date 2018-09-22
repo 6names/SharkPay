@@ -2,15 +2,8 @@
 
 // Links
 a {
-    color: $red;
-    text-decoration: none;
-    -webkit-transition: all 0.2s;
+    color: $theme;
     transition: all 0.2s;
-    
-    &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
     
     &.mail-to,
     &.call-to,

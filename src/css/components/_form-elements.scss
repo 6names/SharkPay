@@ -75,14 +75,6 @@ input.text-input {
         border: 1px solid $red;
     }
     
-    &_date {
-        background-image: $calendar;
-        background-position: calc(100% - 5px) 50%;
-        background-size: 16px auto;
-        background-repeat: no-repeat;
-        cursor: pointer;
-    }
-    
     @media only screen and (max-width: 480px) {
         padding-left: 5px;
         padding-right: 5px;
@@ -143,7 +135,7 @@ select {
     color: $black;
     line-height: 30px;
     outline: none;
-    background-image: $arrowBg;
+    //background-image: $arrowBg;
     background-color: $inputBg;
     background-size: 11px 7px;
     background-position: calc(100% - 5px) calc(50% + 1px);
