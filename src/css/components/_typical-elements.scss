@@ -33,3 +33,17 @@ a {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+// Site links
+.site-links {
+    @include inner;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    font-size: 18px;
+    
+    li {
+        &:not(:first-child) {
+            margin-top: 15px;
+        }
+    }
+}
