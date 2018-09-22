@@ -16,7 +16,7 @@
     &.active {
         width: 100%;
         max-width: 360px;
-        box-shadow: $shadow;
+        box-shadow: 0 5px 15px rgba($black, 0.5);
         transform: translate3d(0, 0, 0);
         
         .header__mobile-content {

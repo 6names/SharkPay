@@ -4,7 +4,7 @@ import {checkStyle} from "./components/form-elements";
 import {getModal, testModal} from "./components/modals";
 import {validate} from "./components/validation";
 import {mobileSubNav, navTrigger} from "./components/mobile-nav";
-import {accordion, hideDropdownOnDocumentClick} from "./components/accordions";
+import {accordion, hideDropdownOnDocumentClick, tabs} from "./components/accordions";
 
 // Window resize
 window.addEventListener('resize', () => {
@@ -31,6 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Accordions
     accordion('.header__lang-trigger', '.header__lang-list');
     hideDropdownOnDocumentClick('.header__lang-trigger', '.header__lang-list');
+    
+    // Tabs
+    tabs('.payment-info__tab', '.payment-info__content', (i) => {
+    
+    });
+    
+    
     /*testModal('blank-modal', () => {
     
     });*/

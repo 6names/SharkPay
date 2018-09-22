@@ -17,4 +17,4 @@ const fileincludeTemplate = (name, file, destination) => {
 };
 
 // Index
-fileincludeTemplate('fileIndex', './src/html/index.html', './src/');
+fileincludeTemplate('fileIndex', './src/html/*.html', './src/');

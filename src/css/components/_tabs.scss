@@ -1,0 +1,148 @@
+.tabs {
+    &__holder {
+        overflow-y: hidden;
+        overflow-x: auto;
+        margin-bottom: 95px;
+        @include inner;
+    }
+    
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        padding-bottom: 20px;
+        
+        &-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            width: 207px;
+            height: 162px;
+            padding-top: 31px;
+            padding-right: 20px;
+            padding-bottom: 26px;
+            padding-left: 20px;
+            word-break: break-word;
+            color: $white;
+            background-color: $tab;
+            border-radius: 4px;
+            transition: all 0.2s 0.2s;
+            cursor: pointer;
+            
+            &:hover {
+                background-color: $tabHover;
+            }
+            
+            &:not(:first-child) {
+                margin-left: 15px;
+            }
+            
+            &:before {
+                position: absolute;
+                content: '';
+                top: 100%;
+                left: 50%;
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 13px solid $theme;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                transform: translate3d(-50%, -20px, 0);
+                opacity: 0;
+                transition: transform 0.2s, opacity 0s 0.2s;
+            }
+    
+            &.active {
+                background-color: $theme;
+                transition: all 0.3s;
+                
+                &:before {
+                    transform: translate3d(-50%, 0, 0);
+                    opacity: 1;
+                    transition: transform 0.2s 0.3s, opacity 0s 0.3s;
+                }
+            }
+            
+            svg {
+                fill: $white;
+                width: 25px;
+                height: 25px;
+                margin-bottom: auto;
+            }
+            
+        }
+    }
+    
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 55px;
+        @include inner;
+        
+        &:not(.active) {
+            @include visually-hidden;
+        }
+    
+    
+        &-item {
+            align-self: center;
+            min-height: 155px;
+            
+            svg {
+                width: 30px;
+                height: 30px;
+                fill: $theme;
+            }
+        }
+        
+        &-name {
+            max-width: 260px;
+            margin-top: 30px;
+            margin-bottom: 18px;
+            font-weight: 600;
+            font-size: 23px;
+        }
+        
+        &-text {
+            color: $transparentWhite;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        &__list-item {
+            width: 123px;
+            height: 112px;
+            padding-top: 16px;
+            padding-right: 15px;
+            padding-bottom: 13px;
+            padding-left: 15px;
+            
+            &:not(:first-child) {
+                margin-left: 12px;
+            }
+        }
+    
+        &__content {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        &__holder {
+            margin-bottom: 30px;
+        }
+        
+        &__content {
+            display: block;
+    
+            &-item {
+                min-height: 0;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

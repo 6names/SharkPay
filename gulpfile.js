@@ -10,13 +10,9 @@ gulp.task('serve', function (fn) {
         notify: false
     });
     
-    // Index
-    gulp.watch('./src/html/index.html', ['fileIndex']);
-    gulp.watch('./src/html/components/*.html', ['fileIndex']);
-    
-    // HTML Reload
-    gulp.watch('./src/contents/*.html').on('change', browserSync.reload);
-    gulp.watch(['./src/index.html']).on('change', browserSync.reload);
+    // HTML
+    gulp.watch('./src/html/**/*.html', ['fileIndex']);
+    gulp.watch('./src/*.html').on('change', browserSync.reload);
     
     // Modals
     gulp.watch('./src/modals/*.html').on('change', browserSync.reload);

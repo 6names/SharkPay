@@ -1,0 +1,23 @@
+.payment-info {
+    padding-top: 151px;
+    padding-bottom: 136px;
+    color: $white;
+    background-color: $black;
+    
+    &__inner {
+        @include inner;
+    }
+    
+    &__title {
+        @include sectionTitle;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        padding-top: 120px;
+        padding-bottom: 62px;
+    
+        &__title {
+            margin-bottom: 268px;
+        }
+    }
+}

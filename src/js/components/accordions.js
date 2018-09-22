@@ -20,7 +20,7 @@ export const accordion = (triggers, contents, parent) => {
     });
 };
 
-export const tabs = (triggers, contents, parent) => {
+export const tabs = (triggers, contents, cb, parent) => {
     if (!parent) {
         parent = document;
     }
@@ -40,6 +40,10 @@ export const tabs = (triggers, contents, parent) => {
                 
                 trigger[i].classList.add('active');
                 content[i].classList.add('active');
+                
+                if (cb) {
+                    cb(i);
+                }
             }
         });
     });
