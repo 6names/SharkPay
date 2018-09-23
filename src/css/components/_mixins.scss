@@ -9,6 +9,15 @@
     overflow: hidden;
 }
 
+@mixin footerLink() {
+    color: $lightColor;
+    text-decoration: none;
+    
+    &:hover {
+        color: $theme;
+    }
+}
+
 @mixin fullLink() {
     position: absolute;
     top: 0;
@@ -24,7 +33,7 @@
 
 @mixin inner($width: 1160px) {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     max-width: $width;
     padding-left: 30px;
     padding-right: 30px;
@@ -135,9 +144,9 @@
     }
 }
 
-@mixin sectionTitle {
-    margin-bottom: 40px;
-    font-size: 52px;
+@mixin sectionTitle($fontSize: 52px, $marginBottom: 40px) {
+    margin-bottom: $marginBottom;
+    font-size: $fontSize;
     line-height: 1.05em;
     
     @media only screen and (max-width: 768px) {

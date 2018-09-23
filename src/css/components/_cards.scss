@@ -1,0 +1,82 @@
+.cards {
+    padding-top: 145px;
+    padding-bottom: 154px;
+    background-color: $lightBg;
+    
+    &__inner {
+        @include inner;
+    }
+    
+    &__title {
+        @include sectionTitle;
+    }
+    
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 44px;
+        
+        .main-butn {
+            height: 252px;
+            font-size: 17px;
+        }
+    }
+    
+    &__item {
+        min-height: 252px;
+        padding-top: 53px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 39px;
+        background-color: $white;
+        box-shadow: $shadow;
+        border-radius: 4px;
+        
+        &-icon {
+            position: relative;
+            width: 47px;
+            height: 47px;
+            margin-bottom: 20px;
+            background-image: $cardsIconBg;
+            background-size: 100% 100%;
+            background-position: 0 0;
+            
+            svg  {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 28px;
+                height: 28px;
+                fill: $theme;
+            }
+        }
+        
+        &-text {
+            font-size: 23px;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        padding-top: 130px;
+        padding-bottom: 66px;
+    
+        &__list {
+            grid-template-columns: 1fr;
+            grid-row-gap: 20px;
+    
+            .main-butn {
+                height: 200px;
+                font-size: 17px;
+            }
+        }
+        
+        &__item {
+            min-height: 252px;
+            padding-top: 32px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 17px;
+        }
+    }
+}

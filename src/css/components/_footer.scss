@@ -2,10 +2,204 @@
     position: relative;
     z-index: 50;
     width: 100%;
-    min-height: 100px;
     overflow: hidden;
+    padding-top: 153px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    color: $lightColor;
     
     &__inner {
-        @include inner();
+        @include inner(1100px);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 490px;
+        grid-template-areas: "nav nav nav contacts"
+                             "nav nav nav contacts"
+                             "copyright copyright license contacts";
+        padding-top: 89px;
+        padding-left: 0;
+        padding-right: 0;
+        border-top: 1px solid $border;
+    }
+    
+    &__logo {
+        display: block;
+        margin-top: 6px;
+        margin-bottom: 33px;
+        grid-column: 1/4;
+    }
+    
+    &__title {
+        margin-bottom: 25px;
+        font-size: 23px;
+        color: $color;
+    }
+    
+    &__nav {
+        display: grid;
+        grid-area: nav;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 30px;
+        font-size: 12px;
+        text-transform: uppercase;
+        
+        &-item {
+            &:not(:first-child) {
+                margin-top: 9px;
+            }
+        }
+        
+        &-link {
+            @include footerLink;
+        }
+    }
+    
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        grid-area: contacts;
+        padding-left: 50px;
+        
+        &-columns {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            a.call-to,
+            a.mail-to {
+                display: block;
+                margin-top: 4px;
+            }
+        }
+        
+        &-column {
+            width: calc(50% - 10px);
+        }
+    }
+    
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+        
+        .light-butn {
+            width: calc(50% - 10px);
+            max-width: 140px;
+        }
+    }
+    
+    &__socials {
+        display: flex;
+        align-items: center;
+        width: calc(50% - 10px);
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $socials;
+        
+        &-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 5px;
+            width: 20px;
+            height: 20px;
+            
+            svg {
+                fill: $socials;
+                
+                &.icon-facebook {
+                    margin-top: -1px;
+                    width: 7px;
+                    height: 14px;
+                }
+                
+                &.icon-youtube {
+                    width: 17px;
+                    height: 11px;
+                }
+            }
+            
+            &:hover {
+                svg {
+                    fill: $theme;
+                }
+            }
+        }
+    }
+    
+    &__copyright,
+    &__license {
+        grid-area: license;
+        margin-bottom: 15px;
+        color: $lighterColor;
+    }
+    
+    &__copyright {
+        grid-area: copyright;
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        padding-top: 64px;
+        padding-right: 15px;
+        padding-left: 15px;
+    
+        &__inner {
+            display: block;
+            padding-top: 41px;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    
+        &__contacts {
+            padding-left: 0;
+        }
+    
+        &__buttons {
+            margin-top: 24px;
+            margin-bottom: 40px;
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        &__logo {
+            grid-column: 1/3;
+        }
+        
+        &__nav {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 40px;
+            
+            &-list:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+                margin-top: 35px;
+            }
+        }
+    
+        &__contacts {
+            font-size: 14px;
+    
+            &-columns {
+                a.call-to,
+                a.mail-to {
+                    display: block;
+                    margin-top: 8px;
+                }
+            }
+        }
+    
+        &__buttons {
+            margin-top: 16px;
+            margin-bottom: 40px;
+        
+            .light-butn {
+                width: calc(50% - 10px);
+                max-width: 120px;
+            }
+        }
+    
+        &__copyright,
+        &__license {
+            font-size: 14px;
+        }
     }
 }

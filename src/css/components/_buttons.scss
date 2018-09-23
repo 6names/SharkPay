@@ -38,6 +38,17 @@ a[class*="-butn"] {
     }
 }
 
+.light-butn {
+    background-color: $white;
+    color: $theme;
+    border: 1px solid $theme;
+    
+    &:hover {
+        background-color: $themeHover;
+        color: $white;
+    }
+}
+
 .main-butn {
     position: relative;
     display: flex;
@@ -63,12 +74,13 @@ a[class*="-butn"] {
         fill: $white;
         width: 23px;
         height: 23px;
-        margin-bottom: auto;
     }
     
     &__text {
         display: flex;
         align-items: center;
         height: auto;
+        margin-top: auto;
+        text-align: left;
     }
 }
