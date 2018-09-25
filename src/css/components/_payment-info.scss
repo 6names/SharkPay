@@ -1,4 +1,5 @@
 .payment-info {
+    position: relative;
     padding-top: 151px;
     padding-bottom: 136px;
     color: $white;
@@ -12,12 +13,84 @@
         @include sectionTitle;
     }
     
+    &__images {
+        position: absolute;
+        top: 118px;
+        left: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 100%;
+        height: 0;
+        max-width: 1140px;
+        transform: translate3d(-50%, 0, 0);
+        
+        &-item {
+            position: relative;
+            width: 434px;
+            height: 300px;
+            
+            &:not(.active) {
+                @include visually-hidden;
+            }
+            
+            & > img {
+                position: absolute;
+            }
+        }
+        
+        &-top-cards {
+            top: 0;
+            right: 0;
+        }
+        
+        &-pc {
+            top: 71px;
+            right: 170px;
+        }
+        
+        &-hand-1 {
+            top: 69px;
+            right: 275px;
+        }
+        
+        &-hand-2 {
+            top: 36px;
+            right: 275px;
+        }
+        
+        &-hand-3 {
+            top: 104px;
+            right: 291px;
+        }
+        
+        &-card-1 {
+            bottom: -41px;
+            right: 68px;
+        }
+        
+        &-card-2 {
+            bottom: -5px;
+            right: 7px;
+        }
+    }
+    
     @media only screen and (max-width: 768px) {
         padding-top: 120px;
         padding-bottom: 62px;
     
         &__title {
             margin-bottom: 268px;
+        }
+    
+        &__images {
+            justify-content: center;
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        &__images-item {
+            transform: scale(0.7);
         }
     }
 }

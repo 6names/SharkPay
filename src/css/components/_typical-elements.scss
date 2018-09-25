@@ -58,6 +58,11 @@ a {
     }
 }
 
+// Main
+.main {
+    overflow: hidden;
+}
+
 // Site links
 .site-links {
     @include inner;

@@ -1,0 +1,356 @@
+html:not(.mobile) {
+    .header {
+        &__logo {
+            polyline,
+            path {
+                opacity: 0;
+                transition: all 0.5s 1.5s;
+            }
+        
+            .header__logo-tail {
+                opacity: 1;
+                transform: translate3d(-100%, 150px, 0);
+                transition: all 2s;
+            }
+        }
+        
+        &__subscribe,
+        &__lang,
+        &__nav {
+            opacity: 0;
+            transition: all 0.5s 1.5s;
+        }
+    }
+    
+    .hero {
+        &__title {
+            opacity: 0;
+            transition: all 1.5s 1.5s;
+        }
+        
+        &__image {
+            opacity: 0;
+            transition: opacity 1.5s;
+        }
+    
+        &__features-item {
+            transform: translate3d(-100vw, 0, 0);
+            transition: all 1s 2s;
+            
+            &:nth-child(2) {
+                transition: all 1s 2.3s;
+            }
+            
+            &:nth-child(3) {
+                transition: all 1s 2.6s;
+            }
+            
+            &:nth-child(4) {
+                transition: all 1s 2.9s;
+            }
+            
+            &:nth-child(5) {
+                transition: all 1s 3.1s;
+            }
+            
+            &:nth-child(6) {
+                transition: all 1s 3.4s;
+            }
+        }
+    
+        &__more {
+            opacity: 0;
+            transform: translate3d(0, 200%, 0);
+            transition: all 1s 2s;
+        }
+    }
+    
+    .payment-info {
+        &__title {
+            opacity: 0;
+            transition: all 1s 2s;
+        }
+    
+        &__images {
+        
+            &-top-cards {
+                opacity: 0;
+                transform: translate3d(100px, -100px, 0);
+                transition: all 1s 0.3s;
+            }
+        
+            &-pc {
+                opacity: 0;
+                transform: translate3d(-100px, 100px, 0);
+                transition: all 1s;
+            }
+    
+            &-hand-3,
+            &-hand-1,
+            &-hand-2 {
+                opacity: 0;
+                transform: translate3d(-100px, 100px, 0);
+                transition: all 1s 0.6s;
+            }
+        
+            &-hand-3 {
+                transition: all 1s 0.9s;
+            }
+    
+            &-card-2,
+            &-card-1 {
+                opacity: 0;
+                transform: translate3d(100px, 100px, 0);
+                transition: all 1s 0.9s;
+            }
+        
+            &-card-2 {
+                transition: all 1s 1.2s;
+            }
+    
+            &-item.active.animate {
+                .payment-info__images-card-1,
+                .payment-info__images-card-2,
+                .payment-info__images-hand-1,
+                .payment-info__images-hand-2,
+                .payment-info__images-hand-3,
+                .payment-info__images-pc,
+                .payment-info__images-top-cards {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+    }
+    
+    .tabs {
+        overflow: hidden;
+        
+        &__list-item {
+            opacity: 0;
+            transform: translate3d(200px, 0, 0);
+            transition: all 0.5s;
+    
+            &:nth-child(2) {
+                transition: all 0.5s 0.2s;
+            }
+    
+            &:nth-child(3) {
+                transition: all 0.5s 0.4s;
+            }
+    
+            &:nth-child(4) {
+                transition: all 0.5s 0.6s;
+            }
+            
+            &:nth-child(5) {
+                transition: all 0.5s 0.8s;
+            }
+            
+            &.animate {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        
+        .main-butn,
+        &__content-item {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+            transition: all 0.5s;
+    
+            &:nth-child(2) {
+                transition: all 0.5s 0.1s;
+            }
+    
+            &:nth-child(3) {
+                transition: all 0.5s 0.2s;
+            }
+    
+            &:nth-child(4) {
+                transition: all 0.5s 0.3s;
+            }
+    
+            &:nth-child(5) {
+                transition: all 0.5s 0.4s;
+            }
+    
+            &:nth-child(6) {
+                transition: all 0.5s 0.5s;
+            }
+        }
+    
+        &__content.active.animate {
+            .main-butn,
+            .tabs__content-item {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+    
+    .cards {
+        .main-butn,
+        &__item {
+            opacity: 0;
+            transform: translate3d(-100%, 100%, 0) rotate(-45deg);
+            transition: all 0.3s;
+            
+            &:nth-child(2n) {
+                transform: translate3d(100%, 100%, 0) rotate(45deg);
+            }
+            
+            &-icon {
+                svg {
+                    transform: scale(0);
+                    transition: all 0.5s 1s;
+                }
+    
+                &:before {
+                    transform: rotate(1080deg);
+                    transition: all 0.5s 0.5s;
+                }
+            }
+    
+            &:nth-child(2n),
+            &:nth-child(3n) {
+                .cards__item-icon:before {
+                    transform: rotate(1080deg);
+                }
+            }
+    
+            &.animate {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+                
+                .cards__item-icon {
+                    svg {
+                        transform: scale(1);
+                    }
+                    
+                    &:before {
+                        transform: rotate(0deg);
+                    }
+                }
+    
+                &:nth-child(2n) {
+                    .cards__item-icon:before {
+                        transform: rotate(180deg)
+                    }
+                }
+    
+                &:nth-child(3n) {
+                    .cards__item-icon:before {
+                        transform: rotate(-45deg)
+                    }
+                }
+            }
+        }
+    }
+    
+    .customers__inner,
+    .platforms__inner {
+        opacity: 0;
+        transition: all 1s;
+        
+        &.animate {
+            opacity: 1;
+        }
+    }
+    
+    .developer {
+        &__image {
+            transition: transform 10s;
+            
+            &.animate {
+                transform: scale(1.2);
+                transition: transform 40s linear;
+            }
+        }
+        
+        &__list {
+            .main-butn,
+            &-item {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0);
+                transition: all 0.5s;
+            
+                &:nth-child(2) {
+                    transition: all 0.5s 0.1s;
+                }
+            
+                &:nth-child(3) {
+                    transition: all 0.5s 0.2s;
+                }
+            
+                &:nth-child(4) {
+                    transition: all 0.5s 0.3s;
+                }
+            
+                &:nth-child(5) {
+                    transition: all 0.5s 0.4s;
+                }
+            
+                &:nth-child(6) {
+                    transition: all 0.5s 0.5s;
+                }
+            }
+        
+            &.animate {
+                .main-butn,
+                .developer__list-item {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+    }
+    
+    .main-butn {
+        &:before {
+            transition: transform 15s linear;
+        }
+    
+        &.animate {
+            &:before {
+                transform: scale(1.5) translate3d(12%, 15%, 0);
+            }
+        }
+    }
+    
+    &.loaded {
+        .header {
+            &__logo {
+                polyline,
+                path {
+                    opacity: 1;
+                }
+    
+                .header__logo-tail {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+            
+            &__subscribe,
+            &__lang,
+            &__nav {
+                opacity: 1;
+            }
+        }
+    
+        .payment-info__title {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+        
+        .hero {
+            &__more,
+            &__features-item,
+            &__title,
+            &__image {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+}

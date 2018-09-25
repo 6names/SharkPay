@@ -82,4 +82,8 @@ export const browserDetect = () => {
     } else {
         pageHtml.classList.add('desktop');
     }
+    
+    setTimeout(() => {
+        pageHtml.classList.add('loaded');
+    }, 500)
 };

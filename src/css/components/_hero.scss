@@ -1,5 +1,7 @@
 .hero {
     position: relative;
+    background-color: $black;
+    overflow: hidden;
     
     &__inner {
         @include inner();

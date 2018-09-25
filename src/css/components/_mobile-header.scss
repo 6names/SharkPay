@@ -195,16 +195,19 @@
         position: absolute;
         top: 50px;
         right: 0;
-        max-width: 360px;
         z-index: 90;
-        width: 100%;
-        min-width: 320px;
+        width: 0;
+        max-width: 360px;
+        min-width: 0;
         color: $white;
         background: $darkBlue;
         transform: translate3d(360px, 0, 0);
         transition: transform 0.35s;
+        overflow: hidden;
         
         &.active {
+            width: 100%;
+            min-width: 320px;
             transform: translate3d(0, 0, 0);
         }
         

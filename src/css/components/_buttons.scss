@@ -64,6 +64,22 @@ a[class*="-butn"] {
     background-color: $theme;
     border-radius: 4px;
     cursor: pointer;
+    overflow: hidden;
+    
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        display: block;
+        width: 161px;
+        height: 162px;
+        //noinspection CssUnknownTarget
+        background-image: url("../images/ui/wave-small.png");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100%;
+    }
     
     &:hover {
         background-color: $themeHover;
@@ -71,12 +87,15 @@ a[class*="-butn"] {
     }
     
     svg {
+        z-index: 2;
         fill: $white;
         width: 23px;
         height: 23px;
     }
     
     &__text {
+        position: relative;
+        z-index: 2;
         display: flex;
         align-items: center;
         height: auto;

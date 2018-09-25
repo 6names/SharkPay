@@ -38,22 +38,76 @@
             width: 47px;
             height: 47px;
             margin-bottom: 20px;
-            background-image: $cardsIconBg;
-            background-size: 100% 100%;
-            background-position: 0 0;
+            
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: $cardsIconBg;
+                background-size: 100% 100%;
+                background-position: 0 0;
+            }
             
             svg  {
                 position: absolute;
                 top: 0;
                 left: 0;
+                z-index: 2;
                 width: 28px;
                 height: 28px;
                 fill: $theme;
+                
+                &.icon-globe {
+                    top: 9px;
+                    left: 31px;
+                }
+                
+                &.icon-pie {
+                    top: 9px;
+                    left: 31px;
+                }
+                
+                &.icon-card {
+                    top: -1px;
+                    left: 12px;
+                    width: 40px;
+                    height: 40px;
+                }
+                
+                &.icon-contractor {
+                    top: -4px;
+                    left: 5px;
+                    width: 43px;
+                    height: 43px;
+                }
+                
+                &.icon-lock {
+                    top: -9px;
+                    left: 10px;
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
         
         &-text {
             font-size: 23px;
+        }
+        
+        &:nth-child(2n) {
+            .cards__item-icon:before {
+                transform: rotate(180deg);
+            }
+        }
+        
+        &:nth-child(3n) {
+            .cards__item-icon:before {
+                transform: rotate(-45deg);
+            }
         }
     }
     
