@@ -12,8 +12,8 @@ import {initSlider} from "./components/sliders"
 const windowScroll = () => {
     // Launch animation on desktop only
     if (!document.querySelector('html').classList.contains('mobile')) {
-        // firstParallax('.hero__image', 0.1);
-        // firstParallax('.hero__inner', 0.2);
+        firstParallax('.hero__image', 0.1);
+        firstParallax('.hero__inner', 0.2);
         
         animateClass('.tabs__list-item');
         animateClass('.payment-info__images-item');
@@ -25,6 +25,8 @@ const windowScroll = () => {
         animateClass('.developer__list');
         animateClass('.developer__image');
         animateClass('.main-butn');
+        animateClass('.steps__item-image');
+        animateClass('.security__image');
     }
 };
 
@@ -64,7 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
         animateClass('.main-butn');
     });
     
-    tabs('.dashboard__tab', '.dashboard__content');
+    tabs('.dashboard__tab', '.dashboard__content', () => {
+        animateClass('.dashboard__content');
+    });
     
     // Sliders
     initSlider('.security__slider-images', '.security__slider', '.security__slider-content');
