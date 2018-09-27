@@ -1,0 +1,122 @@
+.sign-up {
+    padding-top: 142px;
+    padding-bottom: 140px;
+    color: $white;
+    background-color: $darkBg;
+    
+    &__inner {
+        @include inner;
+    }
+    
+    &__title {
+        @include sectionTitle;
+    }
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 15px;
+    }
+    
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: calc(70.3% - 10px);
+        
+        .orange-butn,
+        &-column {
+            width: calc(50% - 12px);
+        }
+    }
+    
+    &__type {
+        display: flex;
+        background-color: $transparentWhite;
+        border-radius: 4px;
+        
+        &-item {
+            position: relative;
+            width: 50%;
+        }
+    }
+    
+    &__radio {
+        @include visually-hidden;
+        
+        &-label {
+            border-radius: 4px;
+            height: 52px;
+            line-height: 52px;
+            text-align: center;
+            color: $placeholder;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        &:checked + .sign-up__radio-label {
+            background-color: $white;
+            color: $theme;
+            cursor: default;
+        }
+        
+        &:not(:checked) + .sign-up__radio-label:hover {
+            color: $theme;
+        }
+    }
+    
+    &__errors {
+        width: calc(29.7% - 10px);
+        
+        &-title {
+            margin-bottom: 10px;
+        }
+        
+        .input-error {
+            color: $transparentWhite;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        &__form {
+            display: block;
+        
+            .orange-butn,
+            &-column {
+                width: 100%;
+            }
+    
+            .orange-butn {
+                max-width: 260px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        padding-top: 128px;
+        padding-bottom: 70px;
+    
+        &__content {
+            display: block;
+            max-width: 480px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        &__form {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        
+        &__errors {
+            width: 100%;
+        }
+    
+        &__radio-label {
+            font-size: 14px;
+        }
+    }
+}

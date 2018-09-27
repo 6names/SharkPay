@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Sharkpay Partners Program"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--Hero-->
+                <section class="hero">
+                    <div class="hero__inner">
+                        <!--breadcrumbs-->
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="main.html">Home</a>
+                            </li>
+                        </ul>
+                        <!--end of breadcrumbs-->
+                        
+                        <div class="hero__title"><h1>Partner program</h1></div>
+                        <div class="hero__text">
+                            <p>The SharkPay Partner Program is designed to promote joint solutions to customers, and accelerate our partners ability to help customers be successful when using Sharkpay technology.</p>
+                            <a class="orange-butn hero__button anchor" href="#sign-up">Sign up</a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero__image">
+                        <picture>
+                            <source media="(max-width:480px)" srcset="images/hero-partners-mobile.jpg"/>
+                            <img src="images/hero-partners.jpg" alt=""/>
+                        </picture>
+                    </div>
+                </section>
+                <!-- end of Hero-->
+                
+                <!--Cards-->
+                <section class="cards">
+                    <div class="cards__inner">
+                        <div class="cards__title"><h2>Partner Program Overview</h2></div>
+                        
+                        <div class="cards__list">
+                            
+                            @@include("./components/cards-item.html",{
+                            "iconName" : "id",
+                            "text" : "Business Partner",
+                            "subtext" : true,
+                            "subContent" : "A business partner can be an incubator, accelerator, co-working space or another business model that want to offer the SharkPay technology to their clients, customers or partners."
+                            })
+                            
+                            @@include("./components/cards-item.html",{
+                            "iconName" : "gear",
+                            "text" : "Technology Partner",
+                            "subtext" : true,
+                            "subContent" : "A technology partner can be a freelancer or developer agency or another business model that can integrate, embed or develop products that complement the Sharkpay platform and leverage the SharkPay API."
+                            })
+                        
+                        </div>
+                    </div>
+                </section>
+                <!-- end of Cards-->
+                
+                <!--Technology-->
+                <section class="technology">
+                    <div class="technology__inner">
+                        <div class="technology__title">
+                            <h2>A fully customisable <br/>technology</h2>
+                        </div>
+                        
+                        <div class="technology__content">
+                            <div class="technology__list">
+                                <div class="technology__list-item">
+                                    <svg class="icon-contractor"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-contractor"></use></svg>
+                                    <div class="technology__list-text">Third Party Payments</div>
+                                </div>
+                                
+                                <div class="technology__list-item">
+                                    <svg class="icon-pie"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pie"></use></svg>
+                                    <div class="technology__list-text">Escrow and Split Funds</div>
+                                </div>
+                                
+                                <div class="technology__list-item">
+                                    <svg class="icon-tags"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tags"></use></svg>
+                                    <div class="technology__list-text">White-label Solution</div>
+                                </div>
+                                
+                                <div class="technology__list-item">
+                                    <svg class="icon-search-2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search-2"></use></svg>
+                                    <div class="technology__list-text">KYC and anti-money laundering checks</div>
+                                </div>
+                                
+                                <div class="technology__list-item">
+                                    <svg class="icon-currency-2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-currency-2"></use></svg>
+                                    <div class="technology__list-text">Multiple Currency Payments</div>
+                                </div>
+                                
+                                <div class="technology__list-item">
+                                    <svg class="icon-hash"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-hash"></use></svg>
+                                    <div class="technology__list-text">International and Domestic Payment Methods</div>
+                                </div>
+                            </div>
+                            
+                            <a href="#sign-up" class="main-butn anchor">
+                                <svg class="icon-key"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-key"></use></svg>
+                                <span class="main-butn__text">
+                                    Sign up
+                                    <span class="animated-arrow animated-arrow_down"></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="technology__image technology__image_no-pattern">
+                        <picture>
+                            <source media="(max-width:480px)" srcset="images/technology-mobile.jpg"/>
+                            <img src="images/technology.jpg" alt=""/>
+                        </picture>
+                    </div>
+                </section>
+                <!--end of Technology-->
+                
+                <!--Customers-->
+                <div class="customers">
+                    
+                    <div class="customers__item">
+                        <div class="customers__inner">
+                            <div class="customers__data">
+                                <div class="customers__logo">
+                                    <img src="images/customer-1.png" srcset="images/customer-1@2x.png 2x" alt=""/>
+                                </div>
+                                <div class="customers__author">
+                                    Alexandre Boucherot
+                                    <span class="customers__author-post">CEO</span>
+                                </div>
+                            </div>
+                            <div class="customers__text">Sharkpay perfectly fits the needs of our international community. We have finally found the solution to this strong market demand. <br/>Good job SharkPay.</div>
+                        </div>
+                    </div>
+                
+                </div>
+                <!-- end of Customers-->
+                
+                <!--Platforms-->
+                <section class="platforms">
+                    <div class="platforms__inner">
+                        <div class="platforms__title">
+                            <h2>A sample of SharkPay <br/>partners</h2>
+                        </div>
+                        <div class="platforms__list">
+                            <div class="platforms__item"><img src="images/platform.png" srcset="images/platform@2x.png 2x" alt=""/></div>
+                            <div class="platforms__item"><img src="images/platform.png" srcset="images/platform@2x.png 2x" alt=""/></div>
+                            <div class="platforms__item"><img src="images/platform.png" srcset="images/platform@2x.png 2x" alt=""/></div>
+                            <div class="platforms__item"><img src="images/platform.png" srcset="images/platform@2x.png 2x" alt=""/></div>
+                            <div class="platforms__item"><img src="images/platform.png" srcset="images/platform@2x.png 2x" alt=""/></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end of Platforms-->
+                
+                <!--sign-up-->
+                <section class="sign-up" id="sign-up">
+                    <div class="sign-up__inner">
+                        <div class="sign-up__title"><h2>Sign up today</h2></div>
+                        <div class="sign-up__content">
+                            <form class="sign-up__form" id="sign-up-form">
+                                
+                                <div class="sign-up__form-column">
+                                    <div class="input-line">
+                                        <div class="sign-up__type">
+                                            <div class="sign-up__type-item">
+                                                <input class="sign-up__radio" id="type-business" type="radio" name="type" checked/>
+                                                <label class="sign-up__radio-label" for="type-business">Business partner</label>
+                                            </div>
+                                            <div class="sign-up__type-item">
+                                                <input class="sign-up__radio" id="type-technical" type="radio" name="type"/>
+                                                <label class="sign-up__radio-label" for="type-technical">Technical partner</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-line"><input class="text-input" id="first-name" name="firstName" type="text" placeholder="First Name"/></div>
+                                    <div class="input-line"><input class="text-input" id="last-name" name="lastName" type="text" placeholder="Last Name"/></div>
+                                    <div class="input-line"><input class="text-input" id="phone" name="phone" type="tel" placeholder="Phone"/></div>
+                                </div>
+                                
+                                <div class="sign-up__form-column">
+                                    <div class="input-line">
+                                        <select id="country" name="country" title="Country">
+                                            <option disabled>Country</option>
+                                            <option>USA</option>
+                                            <option>Russia</option>
+                                            <option>Ukraine</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-line"><input class="text-input" id="company" name="company" type="text" placeholder="Company"/></div>
+                                    <div class="input-line"><input class="text-input" id="email" name="email" type="email" placeholder="E-mail"/></div>
+                                    <div class="input-line"><input class="text-input" id="site" name="site" type="url" placeholder="URL website"/></div>
+                                </div>
+                                
+                                <button class="orange-butn" type="submit">Save</button>
+                            </form>
+                            <div class="sign-up__errors">
+                                <div class="sign-up__errors-title">Please Fix These Errors:</div>
+                                <div class="sign-up__errors-list">
+                                    <div class="input-error">- First name is required</div>
+                                    <div class="input-error">- Last name is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end of sign-up-->
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!--end of FOOTER-->
+    </body>
+</html>

@@ -23,6 +23,7 @@ const windowScroll = () => {
         animateClass('.platforms__inner');
         animateClass('.customers__inner');
         animateClass('.developer__list');
+        animateClass('.technology__list');
         animateClass('.developer__image');
         animateClass('.main-butn');
         animateClass('.steps__item-image');

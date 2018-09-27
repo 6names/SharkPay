@@ -56,6 +56,10 @@ a {
         border-bottom: 2px solid $white;
         transform: rotate(-45deg);
     }
+    
+    &_down {
+        transform: rotate(90deg);
+    }
 }
 
 // Main

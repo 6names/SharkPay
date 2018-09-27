@@ -91,11 +91,32 @@
                     width: 30px;
                     height: 30px;
                 }
+                
+                &.icon-id {
+                    top: -3px;
+                    left: 6px;
+                    width: 44px;
+                    height: 44px;
+                }
+                
+                &.icon-gear {
+                    top: 0;
+                    left: 9px;
+                    width: 47px;
+                    height: 47px;
+                }
             }
         }
         
         &-text {
             font-size: 23px;
+        }
+        
+        &-subtext {
+            max-width: 440px;
+            margin-top: 16px;
+            margin-bottom: 26px;
+            line-height: 1.4em;
         }
         
         &:nth-child(2n) {

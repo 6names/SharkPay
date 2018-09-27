@@ -56,28 +56,33 @@ input.text-input {
     position: relative;
     display: block;
     width: 100%;
-    height: 30px;
-    padding: 0 10px;
+    height: 52px;
+    padding: 0 20px;
     margin: 0;
     line-height: 29px;
-    font-size: 14px;
+    font-size: 17px;
     font-family: $mainFont;
-    color: $black;
-    border: 1px solid $inputBg;
-    background-color: $inputBg;
+    color: $color;
+    border: none;
+    background-color: $transparentWhite;
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-radius: 3px;
+    border-radius: 4px;
+    transition: all 0.2s;
     
     &.error {
         color: $red;
         border: 1px solid $red;
     }
     
+    &:focus {
+        background-color: $white;
+    }
+    
     @media only screen and (max-width: 480px) {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -89,59 +94,40 @@ textarea.textarea-field {
     resize: none;
 }
 
-label.error {
-    display: block;
-    font-size: 14px;
-    line-height: 14px;
-    margin: 15px 0 0 0;
-    text-align: left;
+.input-error {
     color: $red;
-    white-space: nowrap;
+    
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
 }
 
 .input-line {
     position: relative;
-    margin-bottom: 15px;
-}
-
-.half-line {
-    display: flex;
-    justify-content: space-between;
-}
-
-.input-label {
-    margin-bottom: 5px;
-}
-
-.error-message {
-    position: absolute;
-    content: '';
-    top: 100%;
-    left: 0;
-    color: $red;
-    font-size: 14px;
+    margin-bottom: 30px;
 }
 
 select {
     position: relative;
     z-index: 2;
     width: 100%;
-    height: 30px;
+    height: 52px;
     display: block;
     margin: 0;
-    padding: 0 10px;
-    font-size: 14px;
+    padding: 0 20px;
+    font-size: 17px;
     font-family: $mainFont;
-    color: $black;
-    line-height: 30px;
-    outline: none;
-    //background-image: $arrowBg;
-    background-color: $inputBg;
-    background-size: 11px 7px;
+    color: $color;
+    line-height: 52px;
+    background-image: $arrowBg;
+    background-color: $transparentWhite;
+    background-size: 29px 26px;
     background-position: calc(100% - 5px) calc(50% + 1px);
     background-repeat: no-repeat;
-    border: 1px solid $inputBg;
-    border-radius: 3px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
     -webkit-appearance: none;
     
     &.condition-select {
@@ -153,46 +139,7 @@ select {
     }
     
     @media only screen and (max-width: 480px) {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-}
-
-.checkbox {
-
-    &__item {
-        display: none;
-        
-        &:disabled + .checkbox__label {
-            opacity: 0.5;
-            cursor: default;
-        }
-    
-        &:checked + .checkbox__label:before {
-            background-image: $check;
-            background-position: 50% 50%;
-            background-size: 18px 18px;
-        }
-    
-        &.error + .checkbox__label:before {
-            border-color: $red;
-        }
-    }
-    
-    &__label {
-        position: relative;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        
-        &:before {
-            content: '';
-            display: block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid $border;
-            border-radius: 3px;
-            transition: all 0.2s;
-        }
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }

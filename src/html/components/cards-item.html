@@ -3,4 +3,7 @@
         <svg class="icon-@@iconName"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-@@iconName"></use></svg>
     </div>
     <div class="cards__item-text">@@text</div>
+    @@if(subtext === true) {
+        <div class="cards__item-subtext">@@subContent</div>
+    }
 </div>

@@ -29,6 +29,18 @@
         color: $white;
     }
     
+    &__text {
+        max-width: 450px;
+        margin-bottom: 157px;
+        font-size: 23px;
+        color: $white;
+    }
+    
+    &__button {
+        max-width: 200px;
+        margin-top: 46px;
+    }
+    
     &__features {
         margin-bottom: 35px;
         
@@ -224,6 +236,16 @@
                     margin-left: 20px;
                 }
             }
+        }
+    
+        &__text {
+            margin-bottom: 60px;
+            font-size: 17px;
+            line-height: 1.4em;
+        }
+    
+        &__button {
+            margin-top: 40px;
         }
     }
 }
