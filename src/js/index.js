@@ -7,12 +7,13 @@ import {mobileSubNav, navTrigger} from "./components/mobile-nav";
 import {accordion, hideDropdownOnDocumentClick, tabs} from "./components/accordions";
 import {animateClass, firstParallax, parallax} from "./components/parallax";
 import {forLoop} from "./components/helpers";
+import {initSlider} from "./components/sliders"
 
 const windowScroll = () => {
     // Launch animation on desktop only
     if (!document.querySelector('html').classList.contains('mobile')) {
-        firstParallax('.hero__image', 0.1);
-        firstParallax('.hero__inner', 0.2);
+        // firstParallax('.hero__image', 0.1);
+        // firstParallax('.hero__inner', 0.2);
         
         animateClass('.tabs__list-item');
         animateClass('.payment-info__images-item');
@@ -43,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
     getModal(() => {
     
     });
+    /*testModal('blank-modal', () => {
+    
+    });*/
     
     // Accordions
     accordion('.header__lang-trigger', '.header__lang-list');
@@ -60,10 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
         animateClass('.main-butn');
     });
     
-    /*testModal('blank-modal', () => {
+    tabs('.dashboard__tab', '.dashboard__content');
     
-    });*/
+    // Sliders
+    initSlider('.security__slider-images', '.security__slider', '.security__slider-content');
     
+    // Form elements
     checkStyle();
     
     // Window events

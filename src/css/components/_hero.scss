@@ -26,6 +26,7 @@
         margin-bottom: 38px;
         font-size: 52px;
         line-height: 1.07em;
+        color: $white;
     }
     
     &__features {
@@ -58,6 +59,110 @@
         font-size: 17px;
         
         @include animateButtonArrow;
+    }
+    
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 44px;
+        margin-top: 42px;
+        margin-bottom: 147px;
+        @include inner;
+        color: $color;
+        
+        &-item {
+            min-height: 252px;
+            padding-top: 53px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 39px;
+            background-color: $white;
+            box-shadow: 0 15px 30px rgba(70, 69, 69, 0.3);
+            border-radius: 4px;
+    
+            &:nth-child(2n) {
+                .hero__cards-icon:before {
+                    transform: rotate(180deg);
+                }
+            }
+    
+            &:nth-child(3n) {
+                .hero__cards-icon:before {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    
+        &-icon {
+            position: relative;
+            width: 47px;
+            height: 47px;
+            margin-bottom: 20px;
+        
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: $cardsIconBg;
+                background-size: 100% 100%;
+                background-position: 0 0;
+            }
+        
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                width: 47px;
+                height: 47px;
+                fill: $theme;
+                
+                &.icon-currency {
+                    left: -5px;
+                    top: -8px;
+                    width: 51px;
+                    height: 51px;
+                }
+                
+                &.icon-card-2 {
+                    left: -4px;
+                    top: 3px;
+                    width: 49px;
+                    height: 49px;
+                }
+            }
+        }
+    
+        &-name {
+            font-size: 23px;
+        }
+        
+        &-text {
+            max-width: 330px;
+            margin-top: 20px;
+        }
+        
+        &-payment {
+            display: flex;
+            align-items: center;
+            margin-top: 26px;
+            
+            svg {
+                width: 47px;
+                height: 29px;
+                fill: $lightColor;
+                margin-left: 14%;
+                
+                &:not(:first-of-type) {
+                    margin-left: 8px;
+                }
+            }
+        }
     }
     
     @media only screen and (max-width: 1024px) {
@@ -94,6 +199,31 @@
             padding-left: 20px;
             padding-right: 20px;
             font-size: 15px;
+        }
+        
+        &__cards {
+            grid-template-columns: 1fr;
+            grid-row-gap: 20px;
+            margin-top: 30px;
+            margin-bottom: 76px;
+            
+            &-item {
+                min-height: 252px;
+                padding-top: 32px;
+                padding-right: 20px;
+                padding-bottom: 20px;
+                padding-left: 17px;
+            }
+    
+            &-payment {
+                display: flex;
+                align-items: center;
+                margin-top: 26px;
+        
+                svg {
+                    margin-left: 20px;
+                }
+            }
         }
     }
 }

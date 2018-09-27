@@ -69,9 +69,12 @@
                 fill: $white;
                 width: 25px;
                 height: 25px;
-                margin-bottom: auto;
             }
             
+        }
+        
+        &-name {
+            margin-top: auto;
         }
     }
     
@@ -81,6 +84,14 @@
         grid-column-gap: 30px;
         grid-row-gap: 55px;
         @include inner;
+        
+        &_simple {
+            display: block;
+            
+            & > img {
+                width: 100%;
+            }
+        }
         
         &:not(.active) {
             @include visually-hidden;
