@@ -1,7 +1,41 @@
 .hero {
     position: relative;
     background-color: $black;
+    color: $white;
     overflow: hidden;
+    
+    &_light {
+        background-color: $lightBg;
+        color: $color;
+        
+        .breadcrumbs {
+            margin-bottom: 23px;
+            color: $color;
+            
+            &__link {
+                color: $color;
+                
+                &:hover {
+                    color: $theme;
+                }
+            }
+        }
+        
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            display: block;
+            width: 341px;
+            height: 282px;
+            //noinspection CssUnknownTarget
+            background-image: url("../images/ui/wave.png");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: 100%;
+        }
+    }
     
     &__inner {
         @include inner();
@@ -14,7 +48,6 @@
     &__content {
         padding-top: 160px;
         padding-bottom: 128px;
-        color: $white;
         
         svg {
             fill: $white;
@@ -26,14 +59,12 @@
         margin-bottom: 38px;
         font-size: 52px;
         line-height: 1.07em;
-        color: $white;
     }
     
     &__text {
         max-width: 450px;
         margin-bottom: 157px;
         font-size: 23px;
-        color: $white;
         
         &__low {
             margin-bottom: 40px;

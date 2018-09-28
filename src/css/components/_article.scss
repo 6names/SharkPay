@@ -1,0 +1,25 @@
+.article {
+    font-size: 19px;
+    line-height: 1.65em;
+    
+    p {
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        font-size: 17px;
+    
+        p {
+            &:not(:first-child) {
+                margin-top: 25px;
+            }
+        }
+    }
+}

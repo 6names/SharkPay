@@ -77,6 +77,10 @@ html:not(.mobile) {
                 transition: all 0.5s 1s;
             }
         }
+    
+        &:before {
+            transition: transform 15s linear;
+        }
     }
     
     .payment-info {
@@ -470,6 +474,10 @@ html:not(.mobile) {
             &__image {
                 opacity: 1;
                 transform: translate3d(0, 0, 0);
+            }
+    
+            &:before {
+                transform: scale(1.5) translate3d(12%, 15%, 0);
             }
         }
     }

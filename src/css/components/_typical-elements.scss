@@ -3,6 +3,10 @@ a {
     color: $theme;
     transition: all 0.2s;
     
+    &:hover {
+        text-decoration: none;
+    }
+    
     &.mail-to,
     &.call-to,
     &.mail-to:hover,
