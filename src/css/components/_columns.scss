@@ -1,0 +1,29 @@
+.columns {
+    padding-top: 80px;
+    
+    &__inner {
+        display: grid;
+        grid-template-columns: calc(25.2% - 20px) calc(74.8% - 20px);
+        justify-content: space-between;
+        @include inner;
+    }
+    
+    &:not(:last-child) {
+        .columns__inner {
+            padding-bottom: 80px;
+            border-bottom: 1px solid $border;
+        }
+    }
+    
+    &__title {
+        max-width: 250px;
+        margin-bottom: 20px;
+        font-size: 23px;
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        &__inner {
+            display: block;
+        }
+    }
+}

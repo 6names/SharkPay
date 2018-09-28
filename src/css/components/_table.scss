@@ -1,0 +1,85 @@
+.table {
+    overflow-x: auto;
+    
+    &:not(:last-child) {
+        margin-bottom: 80px;
+    }
+    
+    &__title {
+        padding-top: 27px;
+        padding-right: 30px;
+        padding-bottom: 27px;
+        padding-left: 30px;
+        font-size: 19px;
+        text-align: left;
+        color: $white;
+        background-color: $darkBg;
+    }
+    
+    &__head {
+        tr {
+            &:not(:last-child):first-child {
+                th {
+                    background-color: $darkBg;
+                    color: $white;
+                }
+            }
+            
+            &:nth-child(2) {
+                th:first-child {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+    
+    th {
+        height: 77px;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+        background-color: $lightBg;
+        color: $tableColor;
+        border: 1px solid $white;
+        vertical-align: middle;
+        text-align: left;
+        
+        &:first-child {
+            padding-left: 30px;
+        }
+    }
+    
+    td {
+        height: 77px;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+        background-color: $white;
+        border: 1px solid $border;
+        vertical-align: middle;
+        
+        &:first-child {
+            padding-left: 30px;
+            background-color: $lightBg;
+            color: $tableColor;
+        }
+    }
+    
+    &__price {
+        white-space: nowrap;
+    }
+    
+    &__subtext {
+        font-size: 14px;
+        color: $lightColor;
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        th:first-child,
+        td:first-child {
+            padding-left: 20px;
+        }
+    }
+}

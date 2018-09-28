@@ -8,6 +8,7 @@
 @import "components/mobile-header";
 @import "components/footer";
 @import "components/breadcrumbs";
+@import "components/columns";
 @import "components/hero";
 @import "components/payment-info";
 @import "components/cards";
@@ -19,13 +20,14 @@
 @import "components/dashboard";
 @import "components/technology";
 @import "components/sign-up";
-@import "components/pricing";
+@import "components/details";
+@import "components/table";
 @import "components/article";
 @import "components/faq";
 @import "components/tabs";
 @import "components/accordions";
 @import "components/slider";
-//@import "components/animation";
+@import "components/animation";
 
 @media only screen and (max-width: 1400px) {
     blockquote {
