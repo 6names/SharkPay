@@ -12,8 +12,8 @@ import {initSlider} from "./components/sliders"
 const windowScroll = () => {
     // Launch animation on desktop only
     if (!document.querySelector('html').classList.contains('mobile')) {
-        firstParallax('.hero__image', 0.1);
-        firstParallax('.hero__inner', 0.2);
+        // firstParallax('.hero__image', 0.1);
+        // firstParallax('.hero__inner', 0.2);
         
         animateClass('.tabs__list-item');
         animateClass('.payment-info__images-item');

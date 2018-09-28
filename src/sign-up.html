@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Sharkpay Features</title>
+        <title>Sharkpay Sign Up</title>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
@@ -356,275 +356,130 @@
                             </li>
                         </ul>
                         <!--end of breadcrumbs-->
-                        <div class="hero__title"><h1>Accept payments and pay out worldwide</h1></div>
+    
+                        <div class="hero__title"><h1>Sign up</h1></div>
+                        <div class="hero__text hero__text__low">
+                            <p>Sign up today to receive your company reference number. This reference will allow you to create a sandbox account to test our API and to start the legal sign up process of your company.</p>
+                        </div>
                     </div>
     
-                    <div class="hero__cards">
-                        <div class="hero__cards-item">
-                            <div class="hero__cards-icon">
-                                <svg class="icon-currency"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-currency"></use></svg>
-                            </div>
-                            <div class="hero__cards-name">Multi-currency payments</div>
-                            <div class="hero__cards-text">
-                                EUR, GBP, CAD, SEK, NOK, DKK, CHF, ZAR, PLN, USD, AUD
-                            </div>
-                        </div>
+                    <!--sign-up-->
+                    <div class="sign-up" id="sign-up">
+                        <div class="sign-up__inner">
+                            <div class="sign-up__content">
+                                <form class="sign-up__form" id="sign-up-form">
         
-                        <div class="hero__cards-item">
-                            <div class="hero__cards-icon">
-                                <svg class="icon-card-2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-card-2"></use></svg>
-                            </div>
-                            <div class="hero__cards-name">International and domestic payment methods</div>
-                            <div class="hero__cards-payment">
-                                including:
-                                <svg class="icon-payment-1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-payment-1"></use></svg>
-                                <svg class="icon-payment-2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-payment-2"></use></svg>
-                                <svg class="icon-payment-3"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-payment-3"></use></svg>
+                                    <div class="sign-up__form-column">
+                                        <div class="input-line">
+                                            <div class="sign-up__type">
+                                                <div class="sign-up__type-item">
+                                                    <input class="sign-up__radio" id="type-business" type="radio" name="type" checked/>
+                                                    <label class="sign-up__radio-label" for="type-business">Business partner</label>
+                                                </div>
+                                                <div class="sign-up__type-item">
+                                                    <input class="sign-up__radio" id="type-technical" type="radio" name="type"/>
+                                                    <label class="sign-up__radio-label" for="type-technical">Technical partner</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-line"><input class="text-input" id="first-name" name="firstName" type="text" placeholder="First Name"/></div>
+                                        <div class="input-line"><input class="text-input" id="last-name" name="lastName" type="text" placeholder="Last Name"/></div>
+                                        <div class="input-line"><input class="text-input" id="phone" name="phone" type="tel" placeholder="Phone"/></div>
+                                    </div>
+        
+                                    <div class="sign-up__form-column">
+                                        <div class="input-line">
+                                            <select id="country" name="country" title="Country">
+                                                <option disabled>Country</option>
+                                                <option>USA</option>
+                                                <option>Russia</option>
+                                                <option>Ukraine</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-line"><input class="text-input" id="company" name="company" type="text" placeholder="Company"/></div>
+                                        <div class="input-line"><input class="text-input" id="email" name="email" type="email" placeholder="E-mail"/></div>
+                                        <div class="input-line"><input class="text-input" id="site" name="site" type="url" placeholder="URL website"/></div>
+                                    </div>
+        
+                                    <button class="orange-butn" type="submit">Save</button>
+                                </form>
+                                
+                                <div class="sign-up__errors visually-hidden">
+                                    <div class="sign-up__errors-title">Please Fix These Errors:</div>
+                                    <div class="sign-up__errors-list"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-        
+                    <!-- end of sign-up-->
+                    
                     <div class="hero__image">
                         <picture>
-                            <source media="(max-width:480px)" srcset="images/hero-features-mobile.jpg"/>
-                            <img src="images/hero-features.jpg" alt=""/>
+                            <source media="(max-width:480px)" srcset="images/hero-sign-up-mobile.jpg"/>
+                            <img src="images/hero-sign-up.jpg" alt=""/>
                         </picture>
                     </div>
                 </section>
                 <!-- end of Hero-->
-                
-                <!--Steps-->
-                <section class="steps">
-                    <div class="steps__inner">
-                        <div class="steps__title">
-                            <h2>Seamless end-to-end <br/>payment flow</h2>
-                        </div>
-                        <div class="steps__list">
-                            
-                            <!--step-->
-                            <div class="steps__item">
-                                <div class="steps__item-image">
-                                    <img class="steps__item-step-1-circle-1" src="images/steps/step-1-circle-1.png" alt=""/>
-                                    <img class="steps__item-step-1-circle-2" src="images/steps/step-1-circle-2.png" alt=""/>
-                                    <img class="steps__item-step-1-lamp" src="images/steps/step-1-lamp.png" alt=""/>
-                                    <img class="steps__item-step-1-card" src="images/steps/step-1-card.png" alt=""/>
-                                    <img class="steps__item-step-1-square" src="images/steps/step-1-square.png" alt=""/>
+
+                <!--Cards-->
+                <section class="cards">
+                    <div class="cards__inner">
+                        <div class="cards__title"><h2>What you need to know before using SharkPay</h2></div>
+            
+                        <div class="cards__list">
+    
+                            <div class="cards__item">
+                                <div class="cards__item-icon">
+                                    <svg class="icon-map"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-map"></use></svg>
                                 </div>
-                                <div class="steps__item-content">
-                                    <div class="steps__item-name"><h3>Entirely white-label <br/>solution</h3></div>
-                                    <div class="steps__item-text">Create the payment flow and the design you want for your users. They always stay on your platform</div>
-                                </div>
-                            </div>
-                            
-                            <!--step-->
-                            <div class="steps__item">
-                                <div class="steps__item-image">
-                                    <img class="steps__item-step-2-circle" src="images/steps/step-1-circle-2.png" alt=""/>
-                                    <img class="steps__item-step-2-search" src="images/steps/step-2-search.png" alt=""/>
-                                    <img class="steps__item-step-2-square-1" src="images/steps/step-2-square-1.png" alt=""/>
-                                    <img class="steps__item-step-2-square-2" src="images/steps/step-2-square-2.png" alt=""/>
-                                    <img class="steps__item-step-2-person" src="images/steps/step-2-person.png" alt=""/>
-                                </div>
-                                <div class="steps__item-content">
-                                    <div class="steps__item-name"><h3>Customisable <br/>checkout page</h3></div>
-                                    <div class="steps__item-text">You can specify the design and layout of your checkout page for each transaction</div>
-                                </div>
-                            </div>
-                            
-                            <!--step-->
-                            <div class="steps__item">
-                                <div class="steps__item-image">
-                                    <img class="steps__item-step-3-circle-1" src="images/steps/step-1-circle-1.png" alt=""/>
-                                    <img class="steps__item-step-3-circle-2" src="images/steps/step-1-circle-2.png" alt=""/>
-                                    <img class="steps__item-step-3-screen" src="images/steps/step-3-screen.png" alt=""/>
-                                    <img class="steps__item-step-3-usb" src="images/steps/step-3-usb.png" alt=""/>
-                                    <img class="steps__item-step-3-person" src="images/steps/step-3-person.png" alt=""/>
-                                </div>
-                                <div class="steps__item-content">
-                                    <div class="steps__item-name"><h3>Connect <br/>your WordPress</h3></div>
-                                    <div class="steps__item-text">Easily connect your marketplace with SharkPay using our plugin</div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </section>
-                <!-- end of Steps-->
-                
-                <!--Security-->
-                <section class="security">
-                    <div class="security__inner">
-                        <div class="security__title"><h2>Data and transaction <br/>security is paramount</h2></div>
-                        <div class="security__text">We use proven anti-fraud and anti-money laundering methodologies to keep your transactions safe.</div>
-                        
-                        <div class="security__list">
-                            
-                            <div class="security__item">
-                                <svg class="icon-branches"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-branches"></use></svg>
-                                <div class="security__item-text">3D Secure triggered on demand – “Verified By Visa” and “MasterCard SecureCode” networks</div>
-                            </div>
-                            
-                            <div class="security__item">
-                                <svg class="icon-eye"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-eye"></use></svg>
-                                <div class="security__item-text">Real-time anti-fraud rules – stolen cards checks, velocity check…</div>
-                            </div>
-                            
-                            <div class="security__item">
-                                <svg class="icon-lock"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-lock"></use></svg>
-                                <div class="security__item-text">KYC and anti-money laundering management fulfilling European regulatory demands and totally integrated into our API</div>
-                            </div>
-                            
-                            <div class="security__item">
-                                <svg class="icon-tooltip"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tooltip"></use></svg>
-                                <div class="security__item-text">Blacklisting management</div>
-                            </div>
-                            
-                            <div class="security__item">
-                                <svg class="icon-resize"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-resize"></use></svg>
-                                <div class="security__item-text">All KYC requirements are explained here</div>
-                            </div>
-                            
-                        </div>
-                        
-                        <!--slider-->
-                        <div class="security__slider">
-                            
-                            <!--slider image-->
-                            <div class="security__slider-holder">
-                                <div class="security__slider-images">
-                                    <!--slide-->
-                                    <div class="security__slider-image">
-                                        <img src="images/slide-1.jpg" alt=""/>
-                                    </div>
-                                    
-                                    <!--slide-->
-                                    <div class="security__slider-image">
-                                        <img src="images/slide-2.jpg" alt=""/>
-                                    </div>
-                                </div>
-                                <svg class="icon-user"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use></svg>
-                            </div>
-                            
-                            <!--slider tabs-->
-                            <div class="security__slider-content">
-                                <!--text-->
-                                <div class="security__slider-text active">
-                                    <div class="security__slider-title">Transaction security</div>
-                                    <ol class="security__slider-list">
-                                        <li class="security__slider-list-item">Sensitive bank/card data are stored out of your system</li>
-                                        <li class="security__slider-list-item">You do not need PCI requirements. <br/>SharkPAY manages it for you.</li>
-                                        <li class="security__slider-list-item">HTTPS protocol (TLS protocol)</li>
-                                        <li class="security__slider-list-item">PCI-DSS compliant</li>
-                                    </ol>
-                                </div>
+                                <div class="cards__item-text">To use our service, your company needs to be registered in the European Economic Area</div>
                                 
-                                <!--text-->
-                                <div class="security__slider-text">
-                                    <div class="security__slider-title">E-Money Issuer (EMI) Licence</div>
-                                    <ol class="security__slider-list">
-                                        <li class="security__slider-list-item">Sharkpay holds an E-Money Issuer (EMI) licence granted by the CSSF</li>
-                                        <li class="security__slider-list-item">The licence covers all 31 countries of the EEA</li>
-                                        <li class="security__slider-list-item">Our EMI licence entitles you to escrow your customers’ funds in secure and guaranteed e-wallets</li>
-                                        <li class="security__slider-list-item">We declare you as an accredited e-money agent to your local regulator – this also applies to equity and debt based platforms</li>
-                                    </ol>
-                                </div>
                             </div>
-                        </div>
-                        
-                        <!--slider-->
-                        <div class="security__slider">
-                            
-                            <!--slider image-->
-                            <div class="security__slider-holder">
-                                <div class="security__slider-images">
-                                    <!--slide-->
-                                    <div class="security__slider-image">
-                                        <img src="images/slide-2.jpg" alt=""/>
-                                    </div>
-                                    
-                                    <!--slide-->
-                                    <div class="security__slider-image">
-                                        <img src="images/slide-1.jpg" alt=""/>
-                                    </div>
+    
+                            <div class="cards__item">
+                                <div class="cards__item-icon">
+                                    <svg class="icon-api"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-api"></use></svg>
                                 </div>
-                                <svg class="icon-user"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use></svg>
-                            </div>
-                            
-                            <!--slider tabs-->
-                            <div class="security__slider-content">
-                                <!--text-->
-                                <div class="security__slider-text active">
-                                    <div class="security__slider-title">E-Money Issuer (EMI) Licence</div>
-                                    <ol class="security__slider-list">
-                                        <li class="security__slider-list-item">Sharkpay holds an E-Money Issuer (EMI) licence granted by the CSSF</li>
-                                        <li class="security__slider-list-item">The licence covers all 31 countries of the EEA</li>
-                                        <li class="security__slider-list-item">Our EMI licence entitles you to escrow your customers’ funds in secure and guaranteed e-wallets</li>
-                                        <li class="security__slider-list-item">We declare you as an accredited e-money agent to your local regulator – this also applies to equity and debt based platforms</li>
-                                    </ol>
-                                </div>
+                                <div class="cards__item-text">We provide our API to marketplaces, crowdfunding and sharing economy platforms</div>
                                 
-                                <!--text-->
-                                <div class="security__slider-text">
-                                    <div class="security__slider-title">Transaction security</div>
-                                    <ol class="security__slider-list">
-                                        <li class="security__slider-list-item">Sensitive bank/card data are stored out of your system</li>
-                                        <li class="security__slider-list-item">You do not need PCI requirements. <br/>SharkPAY manages it for you.</li>
-                                        <li class="security__slider-list-item">HTTPS protocol (TLS protocol)</li>
-                                        <li class="security__slider-list-item">PCI-DSS compliant</li>
-                                    </ol>
-                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="security__image">
-                            <img src="images/security/security-eye.png" alt="" class="security__image-eye"/>
-                            <img src="images/security/security-key.png" alt="" class="security__image-key"/>
-                            <img src="images/security/security-payment-1.png" alt="" class="security__image-payment-1"/>
-                            <img src="images/security/security-payment-2.png" alt="" class="security__image-payment-2"/>
-                            <img src="images/security/security-phone.png" alt="" class="security__image-phone"/>
-                            <img src="images/security/security-card.png" alt="" class="security__image-card"/>
+    
+                            <div class="cards__item">
+                                <div class="cards__item-icon">
+                                    <svg class="icon-dislike"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-dislike"></use></svg>
+                                </div>
+                                <div class="cards__item-text">We do not accept gambling, games & adult businesses, please find here the list of prohibited business</div>
+                                
+                            </div>
+    
+                            <div class="cards__item">
+                                <div class="cards__item-icon">
+                                    <svg class="icon-sheet-2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-sheet-2"></use></svg>
+                                </div>
+                                <div class="cards__item-text">Our compliance team is entitled to refuse access to our API in accordance to our T&Cs</div>
+                                
+                            </div>
+    
+                            <div class="cards__item">
+                                <div class="cards__item-icon">
+                                    <svg class="icon-bell"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-bell"></use></svg>
+                                </div>
+                                <div class="cards__item-text">Production account are activated Monday to Friday 12pm</div>
+                                
+                            </div>
+    
+                            <a href="faq.html" class="main-butn">
+                                
+                                <span class="main-butn__text">
+                                    More info on our FAQ here
+                                    <span class="animated-arrow"></span>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </section>
-                <!-- end of Security-->
-                
-                <!--Dashboard-->
-                <section class="dashboard">
-                    <div class="dashboard__inner">
-                        <div class="dashboard__title">
-                            <h2>Dashboard</h2>
-                        </div>
-                    </div>
-                    
-                    <div class="tabs">
-                        <div class="tabs__holder">
-                            <ul class="tabs__list">
-                                <li class="tabs__list-item dashboard__tab active">
-                                    <div class="tabs__list-name">Check and manage your transactions</div>
-                                </li>
-                                <li class="tabs__list-item dashboard__tab">
-                                    <div class="tabs__list-name">Dashboard 2</div>
-                                </li>
-                                <li class="tabs__list-item dashboard__tab">
-                                    <div class="tabs__list-name">Dashboard 3</div>
-                                </li>
-                            </ul>
-                        </div>
-    
-                        <div class="tabs__content tabs__content_simple dashboard__content active">
-                            <img src="images/dashboard.jpg" alt=""/>
-                        </div>
-    
-                        <div class="tabs__content tabs__content_simple dashboard__content">
-                            <img src="images/dashboard.jpg" alt=""/>
-                        </div>
-    
-                        <div class="tabs__content tabs__content_simple dashboard__content">
-                            <img src="images/dashboard.jpg" alt=""/>
-                        </div>
-                    </div>
-                </section>
-                <!-- end of Dashboard-->
+                <!-- end of Cards-->
             </div>
         </main>
         <!--end of MAIN-->

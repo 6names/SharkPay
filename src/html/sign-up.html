@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Sharkpay Sign Up"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--Hero-->
+                <section class="hero">
+                    <div class="hero__inner">
+                        <!--breadcrumbs-->
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="main.html">Home</a>
+                            </li>
+                        </ul>
+                        <!--end of breadcrumbs-->
+    
+                        <div class="hero__title"><h1>Sign up</h1></div>
+                        <div class="hero__text hero__text__low">
+                            <p>Sign up today to receive your company reference number. This reference will allow you to create a sandbox account to test our API and to start the legal sign up process of your company.</p>
+                        </div>
+                    </div>
+    
+                    <!--sign-up-->
+                    <div class="sign-up" id="sign-up">
+                        <div class="sign-up__inner">
+                            <div class="sign-up__content">
+                                <form class="sign-up__form" id="sign-up-form">
+        
+                                    <div class="sign-up__form-column">
+                                        <div class="input-line">
+                                            <div class="sign-up__type">
+                                                <div class="sign-up__type-item">
+                                                    <input class="sign-up__radio" id="type-business" type="radio" name="type" checked/>
+                                                    <label class="sign-up__radio-label" for="type-business">Business partner</label>
+                                                </div>
+                                                <div class="sign-up__type-item">
+                                                    <input class="sign-up__radio" id="type-technical" type="radio" name="type"/>
+                                                    <label class="sign-up__radio-label" for="type-technical">Technical partner</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-line"><input class="text-input" id="first-name" name="firstName" type="text" placeholder="First Name"/></div>
+                                        <div class="input-line"><input class="text-input" id="last-name" name="lastName" type="text" placeholder="Last Name"/></div>
+                                        <div class="input-line"><input class="text-input" id="phone" name="phone" type="tel" placeholder="Phone"/></div>
+                                    </div>
+        
+                                    <div class="sign-up__form-column">
+                                        <div class="input-line">
+                                            <select id="country" name="country" title="Country">
+                                                <option disabled>Country</option>
+                                                <option>USA</option>
+                                                <option>Russia</option>
+                                                <option>Ukraine</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-line"><input class="text-input" id="company" name="company" type="text" placeholder="Company"/></div>
+                                        <div class="input-line"><input class="text-input" id="email" name="email" type="email" placeholder="E-mail"/></div>
+                                        <div class="input-line"><input class="text-input" id="site" name="site" type="url" placeholder="URL website"/></div>
+                                    </div>
+        
+                                    <button class="orange-butn" type="submit">Save</button>
+                                </form>
+                                
+                                <div class="sign-up__errors visually-hidden">
+                                    <div class="sign-up__errors-title">Please Fix These Errors:</div>
+                                    <div class="sign-up__errors-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of sign-up-->
+                    
+                    <div class="hero__image">
+                        <picture>
+                            <source media="(max-width:480px)" srcset="images/hero-sign-up-mobile.jpg"/>
+                            <img src="images/hero-sign-up.jpg" alt=""/>
+                        </picture>
+                    </div>
+                </section>
+                <!-- end of Hero-->
+
+                <!--Cards-->
+                <section class="cards">
+                    <div class="cards__inner">
+                        <div class="cards__title"><h2>What you need to know before using SharkPay</h2></div>
+            
+                        <div class="cards__list">
+    
+                            @@include("./components/cards-item.html",{
+                            "iconName" : "map",
+                            "text" : "To use our service, your company needs to be registered in the European Economic Area",
+                            "subtext" : false
+                            })
+    
+                            @@include("./components/cards-item.html",{
+                            "iconName" : "api",
+                            "text" : "We provide our API to marketplaces, crowdfunding and sharing economy platforms",
+                            "subtext" : false
+                            })
+    
+                            @@include("./components/cards-item.html",{
+                            "iconName" : "dislike",
+                            "text" : "We do not accept gambling, games & adult businesses, please find here the list of prohibited business",
+                            "subtext" : false
+                            })
+    
+                            @@include("./components/cards-item.html",{
+                            "iconName" : "sheet-2",
+                            "text" : "Our compliance team is entitled to refuse access to our API in accordance to our T&Cs",
+                            "subtext" : false
+                            })
+    
+                            @@include("./components/cards-item.html",{
+                            "iconName" : "bell",
+                            "text" : "Production account are activated Monday to Friday 12pm",
+                            "subtext" : false
+                            })
+    
+                            @@include("./components/main-button.html",{
+                            "icon" : false,
+                            "text" : "More info on our FAQ here",
+                            "link" : "faq"
+                            })
+                        </div>
+                    </div>
+                </section>
+                <!-- end of Cards-->
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!--end of FOOTER-->
+    </body>
+</html>
