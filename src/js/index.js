@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Accordions
     accordion('.header__lang-trigger', '.header__lang-list');
     hideDropdownOnDocumentClick('.header__lang-trigger', '.header__lang-list');
+    accordion('.documentation__accordion-title', '.documentation__accordion-content');
     
     // Tabs
     tabs('.payment-info__tab', '.payment-info__content', (i) => {

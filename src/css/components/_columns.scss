@@ -2,8 +2,7 @@
     padding-top: 80px;
     
     &__inner {
-        display: grid;
-        grid-template-columns: calc(25.2% - 20px) calc(74.8% - 20px);
+        display: flex;
         justify-content: space-between;
         @include inner;
     }
@@ -13,6 +12,14 @@
             padding-bottom: 80px;
             border-bottom: 1px solid $border;
         }
+    }
+    
+    &__aside {
+        width: calc(25.2% - 20px);
+    }
+    
+    &__content {
+        width: calc(74.8% - 20px);
     }
     
     &__title {
@@ -28,6 +35,11 @@
         
         &__inner {
             display: block;
+        }
+        
+        &__content,
+        &__aside {
+            width: 100%;
         }
     }
     

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Sharkpay Documentation"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--Hero-->
+                <section class="hero hero_light">
+                    <div class="hero__inner">
+                        <!--breadcrumbs-->
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="main.html">Home</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="documentation-1.html">Documentation</a>
+                            </li>
+                        </ul>
+                        <!--end of breadcrumbs-->
+                        
+                        <div class="hero__title"><h1>Documentation</h1></div>
+                    </div>
+                </section>
+                <!-- end of Hero-->
+                
+                <!--Documentation-->
+                <section class="documentation">
+                    <div class="columns">
+                        <div class="columns__inner">
+                            <div class="columns__aside">
+                                
+                                <!--documentation nav-->
+                                <div class="documentation__nav">
+                                    
+                                    <div class="documentation__nav-section">
+                                        <div class="documentation__nav-title">Home</div>
+                                        <ul class="documentation__nav-list">
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Announcements</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">API product updates</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Dashboard updates</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="documentation__nav-section">
+                                        <div class="documentation__nav-title">Overview</div>
+                                        <ul class="documentation__nav-list">
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link current">Integrate your business model</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Anti-Fraud</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">KYC and compliance</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Collecting platform fees</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Tools</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="documentation__nav-section">
+                                        <div class="documentation__nav-title">API basics</div>
+                                        <ul class="documentation__nav-list">
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">API overview</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Authentication</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">SSL information</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Errors</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Idempotency support</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Rate limiting</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">List pagination and</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">filtering</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="documentation__nav-section">
+                                        <div class="documentation__nav-title">API andpoins</div>
+                                        <ul class="documentation__nav-list">
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Clients</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Client wallets</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Users</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">User Emoney</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Wallets</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">PayIns</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Transfers</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">PayOuts</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">KYC Documents</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">UBO Declarations</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Mandates</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Hooks</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Events</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Transactions</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Bank accounts</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Cards</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">PreAuthorizations</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Refunds</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Disputes</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Dispute Documents</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Repudiations</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Settlement Transfers</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Banking aliases (BETA*)</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">SSO</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Permission Groups</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Reporting</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="documentation__nav-section">
+                                        <div class="documentation__nav-title">Payment overview</div>
+                                        <ul class="documentation__nav-list">
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">IDisputes management</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Testing payments</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Customising bank statement references (cards)</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Customising bank statement references (direct debit)</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Customising bank statement references (payouts)</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Customising the design</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                                <!-- end of documentation nav-->
+                                
+                            </div>
+                            
+                            <div class="columns__content">
+                                
+                                <!--documentation content-->
+                                <div class="documentation__content">
+                                    <div class="documentation__title"><h2>Integrating SharkPay <br/>for a Crowdfunding platform</h2></div>
+                                    
+                                    <div class="documentation__accordion accordion">
+                                        <!--accordion section-->
+                                        <div class="accordion__section">
+                                            <div class="documentation__accordion-title accordion__title">Marketplace</div>
+                                            <div class="documentation__accordion-content accordion__content">
+                                                <div class="documentation__subtitle"><h3>Collect your fees</h3></div>
+                                                <p>You can collect your fees when the project has been funded so on the Project owner PAYOUT.</p>
+                                                <p>Ask for a withdraw</p>
+                                                <p>As you know MANGOPAY calculates its fees on the cash-in payments. The user is never directly charged by MANGOPAY. You, as a platform, you are charged by MANGOPAY when you collect your fees. These fees are stored into a particular wallet created by mangopay specially for your platform, you do not have access to this wallet. At the end of the month MANGOPAY automatically sends the collected fees, minus mangopay fees into your bank account.</p>
+                                                <p>Best place to take fees in a crowdfunding model, is when you do the payout from the project’s walelt and the project owner bank account, once the project Is finished and correctly completed. The API only understands cents amounts.</p>
+                                                <p>Let’s take a example: There are 1000€ into the Project owner’s wallet. The project is finished and correctly completed, the app orders to payout the amount. Your platform takes 10% fees so the app calculates the amount before creating the MANGOPAY request. Here it is 1000*10/100 = 100€. The project owner receives in his bank account 900€. The 100€ fees are collected into a fees wallet created by MANGOPAY specificly for your platform. You don’t have access to that wallet.</p>
+                                                <p>The project owner withdrawal The project owner collected the entire amount needed for the project lets say 1000€. The project is finished and correctly completed, the app orders to payout the amount. Your platform takes 10% fees so the app calculates the amount before creating the MANGOPAY request. Here it is 1000*10/100 = 100€. The project owner receives in his bank account 900€. The 100€ fees are collected into a fees wallet created by MANGOPAY specificly for your platform. You don’t have access to that wallet.</p>
+    
+                                                <div class="documentation__subtitle"><h3>The cash out for the project owner</h3></div>
+                                                <p>The project owner just collected the €1000. He is now able to withdraw its funds. <br/>Here are the steps:</p>
+                                                <ul>
+                                                    <li>- Register the bank details</li>
+                                                    <li>- Ask for a withdrawal</li>
+                                                    <li>- Wait during 2 days max</li>
+                                                    <li>- Receive funds on bank account</li>
+                                                    <li>- Technically speaking here are the requests: First you have to register the bank details</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--end of accordion section-->
+                                        
+                                        <!--accordion section-->
+                                        <div class="accordion__section">
+                                            <div class="documentation__accordion-title accordion__title active">Croudfunding</div>
+                                            <div class="documentation__accordion-content accordion__content active">
+                                                <div class="documentation__subtitle"><h3>Collect your fees</h3></div>
+                                                <p>You can collect your fees when the project has been funded so on the Project owner PAYOUT.</p>
+                                                <p>Ask for a withdraw</p>
+                                                <p>As you know MANGOPAY calculates its fees on the cash-in payments. The user is never directly charged by MANGOPAY. You, as a platform, you are charged by MANGOPAY when you collect your fees. These fees are stored into a particular wallet created by mangopay specially for your platform, you do not have access to this wallet. At the end of the month MANGOPAY automatically sends the collected fees, minus mangopay fees into your bank account.</p>
+                                                <p>Best place to take fees in a crowdfunding model, is when you do the payout from the project’s walelt and the project owner bank account, once the project Is finished and correctly completed. The API only understands cents amounts.</p>
+                                                <p>Let’s take a example: There are 1000€ into the Project owner’s wallet. The project is finished and correctly completed, the app orders to payout the amount. Your platform takes 10% fees so the app calculates the amount before creating the MANGOPAY request. Here it is 1000*10/100 = 100€. The project owner receives in his bank account 900€. The 100€ fees are collected into a fees wallet created by MANGOPAY specificly for your platform. You don’t have access to that wallet.</p>
+                                                <p>The project owner withdrawal The project owner collected the entire amount needed for the project lets say 1000€. The project is finished and correctly completed, the app orders to payout the amount. Your platform takes 10% fees so the app calculates the amount before creating the MANGOPAY request. Here it is 1000*10/100 = 100€. The project owner receives in his bank account 900€. The 100€ fees are collected into a fees wallet created by MANGOPAY specificly for your platform. You don’t have access to that wallet.</p>
+                                                
+                                                <div class="documentation__subtitle"><h3>The cash out for the project owner</h3></div>
+                                                <p>The project owner just collected the €1000. He is now able to withdraw its funds. <br/>Here are the steps:</p>
+                                                <ul>
+                                                    <li>- Register the bank details</li>
+                                                    <li>- Ask for a withdrawal</li>
+                                                    <li>- Wait during 2 days max</li>
+                                                    <li>- Receive funds on bank account</li>
+                                                    <li>- Technically speaking here are the requests: First you have to register the bank details</li>
+                                                </ul>
+                                                
+                                                <div class="documentation__subtitle"><h3>Refund</h3></div>
+                                                <p>If a project hasn’t been funded you will reimburse the contributors or if a single buyer wants to get his/her money back, you have to create one or several Transfer-Refunds. The way, the money goes into the Buyer’s wallet and he/her can re-invest it into another project. Or you can even refunded into the credit card (Transfer-Refund + Payin-Refund).</p>
+                                                <p>
+                                                    <a href="#">Here is the Transfer-Refund API</a>
+                                                </p>
+                                                <p>
+                                                    <a href="#">Here is the PayIn-Refund API</a>
+                                                </p>
+                                                
+                                                <div class="documentation__subtitle"><h3>Workflow</h3></div>
+                                                <p>MANGOPAY highly recommends to use the following workflow for any crowdfunding businesses. If you have specific needs which are not mentioned here please take a tour to our desk or contact the support team.</p>
+                                                
+                                                <figure class="documentation__figure"><img src="images/documentation-figure.jpg" alt="Workflow"/></figure>
+                                                
+                                                <ol>
+                                                    <li>Once a Project owner account is created on your application side, your server says to SharkPay to create a User. One this user creates a project, your server creates and associate a Project e-wallet.</li>
+                                                    <li>Once a contributor account is created on your application side, your server says to SharkPay to create a User and to automatically associate a e-wallet.</li>
+                                                    <li>The User buyer pays into its own wallet. Funds are NOT escrowed there, they are directly transferred into the project e-wallet.</li>
+                                                    <li>If the project is funded you then can do a payout into the project owner’s bank account.</li>
+                                                    <li>If the project had failed you can refund everybody by first bringing the money back to their wallets then refund into their bank account</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <!--end of accordion section-->
+                                    </div>
+                                    
+                                </div>
+                                <!-- end of documentation content-->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!--end of FOOTER-->
+    </body>
+</html>

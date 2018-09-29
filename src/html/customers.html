@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Sharkpay Customers"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--Hero-->
+                <section class="hero">
+                    <div class="hero__inner">
+                        <!--breadcrumbs-->
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="main.html">Home</a>
+                            </li>
+                        </ul>
+                        <!--end of breadcrumbs-->
+                        
+                        <div class="hero__title"><h1>Customers</h1></div>
+                        <div class="hero__text">
+                            <p>Over 2,000 platforms trust SharkPay</p>
+                            <a class="orange-butn hero__button anchor" href="sign-up.html">Sign up</a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero__image">
+                        <picture>
+                            <source media="(max-width:480px)" srcset="images/hero-customers-mobile.jpg"/>
+                            <img src="images/hero-customers.jpg" alt=""/>
+                        </picture>
+                    </div>
+                </section>
+                <!-- end of Hero-->
+                
+                <!--Customers-->
+                <div class="customers">
+                    
+                    <div class="customers__item">
+                        <div class="customers__inner">
+                            <div class="customers__data">
+                                <div class="customers__logo">
+                                    <img src="images/customer-1.png" srcset="images/customer-1@2x.png 2x" alt=""/>
+                                </div>
+                                <div class="customers__author">
+                                    Alexandre Boucherot
+                                    <span class="customers__author-post">CEO</span>
+                                </div>
+                            </div>
+                            <div class="customers__text">Sharkpay perfectly fits the needs of our international community. We have finally found the solution to this strong market demand. <br/>Good job SharkPay.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="customers__item">
+                        <div class="customers__inner">
+                            <div class="customers__data">
+                                <div class="customers__logo">
+                                    <img src="images/customer-1.png" srcset="images/customer-1@2x.png 2x" alt=""/>
+                                </div>
+                                <div class="customers__author">
+                                    Alexandre Boucherot
+                                    <span class="customers__author-post">CEO</span>
+                                </div>
+                            </div>
+                            <div class="customers__text">Sharkpay perfectly fits the needs of our international community. We have finally found the solution to this strong market demand. <br/>Good job SharkPay.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="customers__item">
+                        <div class="customers__inner">
+                            <div class="customers__data">
+                                <div class="customers__logo">
+                                    <img src="images/customer-1.png" srcset="images/customer-1@2x.png 2x" alt=""/>
+                                </div>
+                                <div class="customers__author">
+                                    Alexandre Boucherot
+                                    <span class="customers__author-post">CEO</span>
+                                </div>
+                            </div>
+                            <div class="customers__text">Sharkpay perfectly fits the needs of our international community. We have finally found the solution to this strong market demand. <br/>Good job SharkPay.</div>
+                        </div>
+                    </div>
+                
+                </div>
+                <!-- end of Customers-->
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!--end of FOOTER-->
+    </body>
+</html>

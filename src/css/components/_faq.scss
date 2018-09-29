@@ -1,0 +1,178 @@
+.faq {
+    position: relative;
+    z-index: 5;
+    
+    &__inner {
+        @include inner;
+    }
+    
+    &__nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 12px;
+        padding-top: 36px;
+        padding-right: 40px;
+        padding-bottom: 36px;
+        padding-left: 40px;
+        margin-top: -15px;
+        margin-bottom: 56px;
+        font-size: 15px;
+        background-color: #71615a;
+        border-radius: 4px;
+        
+        &-link {
+            color: $white;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    &__section {
+        &:not(:last-child) {
+            margin-bottom: 70px;
+        }
+    }
+    
+    &__title {
+        font-size: 40px;
+        margin-bottom: 22px;
+        
+        &-icon {
+            position: relative;
+            width: 47px;
+            height: 47px;
+            margin-bottom: 12px;
+        
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: $cardsIconBg;
+                background-size: 100% 100%;
+                background-position: 0 0;
+            }
+        
+            svg {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                z-index: 2;
+                width: 43px;
+                height: 43px;
+                fill: $theme;
+                transform: translate3d(50%, -50%, 0);
+                
+                &.icon-checked {
+                    width: 36px;
+                    height: 36px;
+                }
+                
+                &.icon-arrows {
+                    width: 40px;
+                    height: 40px;
+                }
+                
+                &.icon-cards {
+                    width: 38px;
+                    height: 38px;
+                }
+                
+                &.icon-lock-2 {
+                    width: 43px;
+                    height: 43px;
+                }
+                
+                &.icon-globe-2 {
+                    width: 42px;
+                    height: 42px;
+                }
+                
+                &.icon-tag {
+                    width: 39px;
+                    height: 39px;
+                }
+                
+                &.icon-gear-2 {
+                    width: 41px;
+                    height: 41px;
+                }
+                
+                &.icon-user {
+                    width: 37px;
+                    height: 37px;
+                }
+                
+                &.icon-lamp-2 {
+                    width: 41px;
+                    height: 41px;
+                }
+            }
+        }
+    }
+    
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+        
+        &-item {
+            display: flex;
+            align-items: flex-end;
+            min-height: 150px;
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 26px;
+            padding-left: 30px;
+            font-size: 19px;
+            color: $color;
+            text-decoration: none;
+            background-color: $lightBg;
+            border-radius: 4px;
+            
+            &:hover {
+                color: $white;
+                background-color: $theme;
+            }
+        }
+        
+        &-name {
+            display: block;
+            max-width: 257px;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        &__nav {
+            display: none;
+        }
+        
+        &__section:nth-child(2) {
+            margin-top: 90px;
+        }
+        
+        &__list {
+            grid-gap: 20px;
+            grid-template-columns: 1fr;
+            
+            &-item {
+                padding-right: 18px;
+                padding-bottom: 26px;
+                padding-left: 18px;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        &__title {
+            font-size: 23px;
+        }
+    }
+}

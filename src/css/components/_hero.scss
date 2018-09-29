@@ -27,8 +27,8 @@
             top: 0;
             left: 0;
             display: block;
-            width: 341px;
-            height: 282px;
+            width: 206px;
+            height: 286px;
             //noinspection CssUnknownTarget
             background-image: url("../images/ui/wave.png");
             background-repeat: no-repeat;
@@ -59,6 +59,10 @@
         margin-bottom: 38px;
         font-size: 52px;
         line-height: 1.07em;
+        
+        &_wide {
+            max-width: 800px;
+        }
     }
     
     &__text {

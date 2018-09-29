@@ -11,51 +11,58 @@
         position: relative;
         display: flex;
         align-items: center;
+        min-height: 68px;
         padding-top: 10px;
         padding-bottom: 8px;
-        font-size: 17px;
-        font-weight: 700;
+        padding-left: 20px;
+        font-size: 23px;
+        line-height: normal;
         cursor: pointer;
         transition: all 0.2s;
+    
+        &:before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-image: $crossBg;
+            margin-right: 20px;
+            background-size: 100%;
+            transform: rotate(135deg);
+            transition: all 0.3s;
+        }
         
-        &-name {
-            display: flex;
-            align-items: center;
-            
-            &:after {
-                content: '';
-                display: block;
-                width: 12px;
-                height: 8px;
-                margin-left: 10px;
-                background-size: 12px 8px;
-                transition: all 0.2s;
-            }
+        &:hover {
+            color: $theme;
         }
     
         &.active {
-            color: $red;
-        
-            .accordion__title-name {
-                &:after {
-                    transform: rotate(180deg);
-                }
+            color: $theme;
+            
+            &:before {
+                transform: rotate(0deg);
             }
         }
     }
     
     &__content {
         max-height: 0;
+        padding-left: 58px;
         opacity: 0;
         overflow: hidden;
         transition: all 0.15s;
-        border-top: 1px solid transparent;
         
         &.active {
-            border-color: $border;
             max-height: 3000px;
             opacity: 1;
             transition: max-height 0.8s, opacity 0.2s;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        &__title,
+        &__content {
+            padding-left: 0;
         }
     }
 }

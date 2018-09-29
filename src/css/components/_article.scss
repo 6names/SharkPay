@@ -40,14 +40,13 @@
             &:before {
                 position: absolute;
                 content: '';
-                top: 50%;
+                top: 0.62em;
                 left: 0;
                 display: block;
                 width: 7px;
                 height: 7px;
                 background-color: $theme;
                 border-radius: 50%;
-                transform: translateY(-50%);
             }
         }
     }

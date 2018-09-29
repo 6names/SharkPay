@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Sharkpay Documentation"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--Hero-->
+                <section class="hero hero_light">
+                    <div class="hero__inner">
+                        <!--breadcrumbs-->
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="main.html">Home</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="documentation-1.html">Documentation</a>
+                            </li>
+                        </ul>
+                        <!--end of breadcrumbs-->
+                        
+                        <div class="hero__title"><h1>Documentation</h1></div>
+                    </div>
+                </section>
+                <!-- end of Hero-->
+                
+                <!--Documentation-->
+                <section class="documentation">
+                    <div class="columns">
+                        <div class="columns__inner">
+                            <div class="columns__aside">
+                                
+                                <!--documentation nav-->
+                                <div class="documentation__nav">
+                                    
+                                    <div class="documentation__nav-section">
+                                        <div class="documentation__nav-title">Home</div>
+                                        <ul class="documentation__nav-list">
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Announcements</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">API product updates</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Dashboard updates</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="documentation__nav-section">
+                                        <div class="documentation__nav-title">Overview</div>
+                                        <ul class="documentation__nav-list">
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Integrate your business model</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Anti-Fraud</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link current">KYC and compliance</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Collecting platform fees</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Tools</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="documentation__nav-section">
+                                        <div class="documentation__nav-title">API basics</div>
+                                        <ul class="documentation__nav-list">
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">API overview</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Authentication</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">SSL information</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Errors</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Idempotency support</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Rate limiting</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">List pagination and</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">filtering</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="documentation__nav-section">
+                                        <div class="documentation__nav-title">API andpoins</div>
+                                        <ul class="documentation__nav-list">
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Clients</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Client wallets</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Users</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">User Emoney</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Wallets</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">PayIns</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Transfers</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">PayOuts</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">KYC Documents</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">UBO Declarations</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Mandates</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Hooks</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Events</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Transactions</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Bank accounts</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Cards</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">PreAuthorizations</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Refunds</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Disputes</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Dispute Documents</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Repudiations</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Settlement Transfers</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Banking aliases (BETA*)</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">SSO</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Permission Groups</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Reporting</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="documentation__nav-section">
+                                        <div class="documentation__nav-title">Payment overview</div>
+                                        <ul class="documentation__nav-list">
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">IDisputes management</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Testing payments</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Customising bank statement references (cards)</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Customising bank statement references (direct debit)</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Customising bank statement references (payouts)</a>
+                                            </li>
+                                            <li class="documentation__nav-item">
+                                                <a href="#" class="documentation__nav-link">Customising the design</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                
+                                </div>
+                                <!-- end of documentation nav-->
+                            
+                            </div>
+                            
+                            <div class="columns__content">
+                                
+                                <!--documentation content-->
+                                <div class="documentation__content">
+                                    <div class="documentation__title"><h2>KYC and compliance</h2></div>
+                                    <div class="documentation__subtitle"><h3>KYC means Know Your Customer</h3></div>
+                                    <p>Yand are a set of legal obligations related to our license as an electronic money issuer and are necessary in order to fight fraud, money laundering and financing of terrorism. There are 3 levels of validation (light, regular and strong) and the whole process of uploading documents and viewing a user's KYC level is all managed through the API. A higher KYC level allows a user to handle higher volumes of cash flows:</p>
+                                    <p>Light validation: Transactions worth less than €2,500 for cash-in and/or €1,000 for cash-out cumulated per legal year and per user (transfers are also counted in this equation) Regular validation: Transactions worth more than €2,500 for cash-in and/or €1,000 for cash-out cumulated per legal year and per user Strong validation: Clients suspected of money laundering and/or terrorism and/or politically exposed persons</p>
+                                    
+                                    <div class="documentation__subtitle"><h3>Light Authentication</h3></div>
+                                    <p>This is the basic information you are required to collect from your users in order to process payments (Cash-in / Cash-out). We cannot allow any transactions from a user who has not provided the following information:</p>
+                                    
+                                    <div class="documentation__subtitle"><h3>Light Authentication</h3></div>
+                                    <p>Allows for unlimited cash-in or cash-out (per user, per year) <br/>As well as the information for "light" level, this is the information you are required to collect from your users to go over the Cash-in (€2,500) and/or Cash-out (€1,000) limits:</p>
+                                    <p>Note that you can change the LegalPersonType once it has been set (although if the user doesn't have the required KYC docs for the new value as per the table above, their KYC level will be downgraded as you would expect)</p>
+                                    
+                                    <div class="documentation__subtitle"><h3>Light Authentication</h3></div>
+                                    <p>This KYC level is used when a user is suspected of money laundering, terrorism or for politically exposed persons. Note that this level is manual and not managed via the API.</p>
+                                    <p>As well as the information for "light" level, this is the information we required in specific cases.</p>
+                                    <p>For a natural user: you need to give us the Address, the Occupationand IncomeRange. <br/>An "ADDRESS_PROOF" is required as a KYC document.</p>
+                                    <p>For a legal user, confirmation of bank details must be provided (this must be sent to us manually and can not be done via the API)</p>
+                                    <p>Note that you can change the LegalPersonType once it has been set (although if the user doesn't have the required KYC docs for the new value as per the table above, their KYC level will be downgraded as you would expect)</p>
+                                    <ol>
+                                        <li>Water/electricity/gas/telephone bill</li>
+                                        <li>Tax certificate</li>
+                                        <li>Householder insurance</li>
+                                        <li>Confirmation of real estate ownership</li>
+                                    </ol>
+                                </div>
+                                <!-- end of documentation content-->
+                            
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!--end of FOOTER-->
+    </body>
+</html>
