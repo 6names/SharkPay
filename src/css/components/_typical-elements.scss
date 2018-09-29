@@ -64,6 +64,16 @@ a {
     &_down {
         transform: rotate(90deg);
     }
+    
+    &_orange {
+        border-top-color: $theme;
+        border-left-color: $theme;
+        
+        &:before {
+            border-right-color: $theme;
+            border-bottom-color: $theme;
+        }
+    }
 }
 
 // Main

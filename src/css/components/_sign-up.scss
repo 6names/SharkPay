@@ -26,8 +26,18 @@
         width: calc(70.3% - 10px);
         
         .orange-butn,
+        &-help,
         &-column {
             width: calc(50% - 12px);
+        }
+    
+        &-help {
+            align-self: flex-start;
+            line-height: 1.4em;
+        }
+        
+        .input-line {
+            width: 100%;
         }
     }
     
@@ -83,8 +93,13 @@
             display: block;
         
             .orange-butn,
+            &-help,
             &-column {
                 width: 100%;
+            }
+    
+            &-help {
+                margin-top: 15px;
             }
     
             .orange-butn {

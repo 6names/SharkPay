@@ -87,24 +87,30 @@ input.text-input {
 }
 
 textarea.textarea-field {
-    height: 80px;
-    padding: 5px 10px;
+    height: 130px;
+    padding: 15px 20px;
     line-height: normal;
     overflow: hidden;
     resize: none;
 }
 
-.input-error {
-    color: $red;
+.input {
+    &-error {
+        color: $red;
     
-    &:not(:first-child) {
-        margin-top: 10px;
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
     }
-}
-
-.input-line {
-    position: relative;
-    margin-bottom: 30px;
+    
+    &-line {
+        position: relative;
+        margin-bottom: 30px;
+    }
+    
+    &-label {
+        padding-bottom: 7px;
+    }
 }
 
 select {

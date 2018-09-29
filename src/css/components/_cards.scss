@@ -140,6 +140,13 @@
                     width: 37px;
                     height: 37px;
                 }
+                
+                &.icon-phone {
+                    top: 12px;
+                    left: 17px;
+                    width: 34px;
+                    height: 34px;
+                }
             }
         }
         
@@ -152,6 +159,15 @@
             margin-top: 16px;
             margin-bottom: 26px;
             line-height: 1.4em;
+        }
+        
+        &-more {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+            font-size: 19px;
+            
+            @include animateButtonArrow;
         }
         
         &:nth-child(2n) {

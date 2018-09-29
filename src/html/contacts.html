@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Sharkpay Contacts"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--Hero-->
+                <section class="hero">
+                    <div class="hero__inner">
+                        <!--breadcrumbs-->
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="main.html">Home</a>
+                            </li>
+                        </ul>
+                        <!--end of breadcrumbs-->
+                        
+                        <div class="hero__title"><h1>Get in touch with us</h1></div>
+                        <div class="hero__text hero__text__low">
+                            <p>SharkPay is a B2B solution for marketplaces, crowdfunding and sharing economy platforms. If you made a purchase on a marketplace using SharkPay, please contact directly the platform.</p>
+                        </div>
+                    </div>
+                    
+                    <!--sign-up-->
+                    <div class="sign-up">
+                        <div class="sign-up__inner">
+                            <div class="sign-up__content">
+                                <form class="sign-up__form" id="feedback-form">
+                                    
+                                    <div class="sign-up__form-column">
+                                        <div class="input-line">
+                                            <label class="input-label" for="type">Contact type*</label>
+                                            <select id="type" name="type" title="Contact type">
+                                                <option value="empty">-- Choose one --</option>
+                                                <option>Help</option>
+                                                <option>Feedback</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-line">
+                                            <label class="input-label" for="company">Your Company Reference</label>
+                                            <input class="text-input" id="company" name="company" type="text" placeholder="Company"/>
+                                        </div>
+                                        <div class="input-line">
+                                            <label class="input-label" for="country">Headquarters location</label>
+                                            <select id="country" name="country" title="Country">
+                                                <option value="empty">Country</option>
+                                                <option>USA</option>
+                                                <option>Russia</option>
+                                                <option>Ukraine</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="sign-up__form-column">
+                                        <div class="input-line">
+                                            <label class="input-label" for="reference">Already have your company reference?</label>
+                                            <select id="reference" name="reference" title="Already have your company reference?">
+                                                <option value="empty">-- Choose one --</option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="input-line">
+                                            <label class="input-label" for="email">E-mail</label>
+                                            <input class="text-input" id="email" name="email" type="email" placeholder="E-mail"/>
+                                        </div>
+    
+                                        <div class="input-line">
+                                            <label class="input-label" for="request">Request type</label>
+                                            <select id="request" name="request" title="Request type">
+                                                <option value="empty">-- Choose one --</option>
+                                                <option>Help</option>
+                                                <option>Feedback</option>
+                                            </select>
+                                        </div>
+                                    </div>
+    
+                                    <div class="input-line">
+                                        <label class="input-label" for="message">Message</label>
+                                        <textarea class="textarea-field" id="message" name="message" placeholder="Your Message"></textarea>
+                                    </div>
+                                    
+                                    <button class="orange-butn" type="submit">Send</button>
+                                    
+                                    <div class="sign-up__form-help">
+                                        <a href="#" class="modal-trigger" data-target="reset-modal">Forgotten your reference</a>
+                                        <br/>or
+                                        <a href="#" class="modal-trigger" data-target="register-modal">need to register?</a>
+                                    </div>
+                                </form>
+                                
+                                <div class="sign-up__errors visually-hidden">
+                                    <div class="sign-up__errors-title">Please Fix These Errors:</div>
+                                    <div class="sign-up__errors-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of sign-up-->
+                    
+                    <div class="hero__image">
+                        <picture>
+                            <source media="(max-width:480px)" srcset="images/hero-contacts-mobile.jpg"/>
+                            <img src="images/hero-contacts.jpg" alt=""/>
+                        </picture>
+                    </div>
+                </section>
+                <!-- end of Hero-->
+                
+                <!--Cards-->
+                <section class="cards">
+                    <div class="cards__inner">
+                        <div class="cards__title"><h2>What you need to know before using SharkPay</h2></div>
+                        
+                        <div class="cards__list">
+    
+                            <div class="cards__item">
+                                <div class="cards__item-icon">
+                                    <svg class="icon-phone"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg>
+                                </div>
+                                <div class="cards__item-text">Call our team</div>
+                                <div class="cards__item-subtext">
+                                    Tel : <a class="call-to" href="tel:442080680070">+44 20 8068 0070</a>
+                                    <br/>Monday to Friday – 9am to 6.30pm
+
+                                    <a href="faq.html" class="cards__item-more">
+                                        Check our our FAQS
+                                        <span class="animated-arrow animated-arrow_orange"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                <!-- end of Cards-->
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!--end of FOOTER-->
+    </body>
+</html>
