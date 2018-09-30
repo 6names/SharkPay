@@ -11,19 +11,25 @@
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 20px;
         grid-row-gap: 12px;
+        @include inner(1100px);
         padding-top: 36px;
         padding-right: 40px;
         padding-bottom: 36px;
         padding-left: 40px;
-        margin-top: -15px;
         margin-bottom: 56px;
         font-size: 15px;
         background-color: #71615a;
         border-radius: 4px;
+        transform: translateY(-15px);
         
         &-link {
             color: $white;
             text-decoration: none;
+            
+            &.current {
+                color: $theme;
+                pointer-events: none;
+            }
             
             &:hover {
                 text-decoration: underline;

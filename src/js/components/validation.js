@@ -2,10 +2,10 @@
 // data-error-message="message" For error message
 // value="empty" For invalid select option
 //
-import {forLoop} from "./helpers";
+import {append, createTag, forLoop} from "./helpers";
 
 export const validate = (formEl, callback) => {
-    const form = document.getElementById(formEl);
+    const form = document.querySelector(formEl);
     
     if (form) {
         let i;
@@ -17,35 +17,36 @@ export const validate = (formEl, callback) => {
         
         // Add error message
         const addErrorMessage = (input) => {
-            const message = document.createElement('div');
-            message.className = 'error-message';
-            message.innerHTML = error;
-            const type = input.getAttribute('type');
-            
-            if (type === 'checkbox' || type === 'radio') {
-                if (input.parentElement.nextElementSibling == null || !input.parentElement.nextElementSibling.classList.contains('error-message')) {
-                    input.parentElement.insertAdjacentElement('afterend', message);
-                }
+            const parent = form.parentElement;
+            const messagesHolder = parent.querySelector('.form-errors');
+            const messagesList = parent.querySelector('.form-errors__list');
+            const message = createTag('input-error');
+            if (messagesHolder) {
+                message.dataset.id = input.name;
+                message.innerText = input.dataset.errorMessage;
+                messagesHolder.classList.remove('visually-hidden');
                 
-            } else {
-                if (input.nextElementSibling == null) {
-                    input.insertAdjacentElement('afterend', message);
+                const errors = parent.querySelectorAll('.input-error');
+                if (errors.length > 0) {
+                    if (!messagesList.contains(parent.querySelector(`[data-id="${input.name}"]`))) append(messagesList, message);
+                } else {
+                    append(messagesList, message);
                 }
             }
         };
         
         // Remove error message
         const removeErrorMessage = (input) => {
-            const message = input.nextSibling;
-            const type = input.getAttribute('type');
-            
-            if (type === 'checkbox' || type === 'radio') {
-                if (input.parentElement.nextElementSibling != null && input.parentElement.nextElementSibling.classList.contains('error-message')) {
-                    input.parentElement.nextElementSibling.remove();
-                }
-            } else {
-                if (input.nextElementSibling != null) {
-                    message.remove();
+            const parent = form.parentElement;
+            const messagesHolder = parent.querySelector('.form-errors');
+            const errors = parent.querySelectorAll('.input-error');
+            if (messagesHolder) {
+                forLoop(errors.length, (i) => {
+                    if (errors[i].dataset.id === input.name) errors[i].remove();
+                });
+                
+                if (errors.length < 1) {
+                    messagesHolder.classList.add('visually-hidden');
                 }
             }
         };
@@ -55,10 +56,10 @@ export const validate = (formEl, callback) => {
                 const select = selects[i];
                 if (select.value === 'empty') {
                     select.classList.add('error');
-                    form.classList.add('invalid');
+                    addErrorMessage(select);
                 } else {
                     select.classList.remove('error');
-                    form.classList.remove('invalid');
+                    removeErrorMessage(select);
                 }
             });
         };
@@ -73,10 +74,8 @@ export const validate = (formEl, callback) => {
                 if (type === 'checkbox') {
                     if (!input.checked) {
                         input.classList.add('error');
-                        form.classList.add('invalid');
                     } else {
                         input.classList.remove('error');
-                        form.classList.remove('invalid');
                     }
                 } else if (type === 'radio') {
                     const groupName = input.getAttribute('name');
@@ -92,14 +91,12 @@ export const validate = (formEl, callback) => {
                             const item = group[i];
                             item.parentElement.classList.add('error');
                             item.parentElement.parentElement.classList.add('error');
-                            form.classList.add('invalid');
                         });
                     } else {
                         forLoop(group.length, (i) => {
                             const item = group[i];
                             item.parentElement.classList.remove('error');
                             item.parentElement.parentElement.classList.remove('error');
-                            form.classList.remove('invalid');
                         });
                     }
                 } else {
@@ -107,13 +104,11 @@ export const validate = (formEl, callback) => {
                         const randomInput = () => {
                             if (input.value === '') {
                                 input.classList.add('error');
-                                form.classList.add('invalid');
                                 if (error) {
                                     addErrorMessage(input);
                                 }
                             } else {
                                 input.classList.remove('error');
-                                form.classList.remove('invalid');
                                 removeErrorMessage(input);
                             }
                         };
@@ -121,13 +116,11 @@ export const validate = (formEl, callback) => {
                         const patternInput = () => {
                             if (!re.test(input.value)) {
                                 input.classList.add('error');
-                                form.classList.add('invalid');
                                 if (error) {
                                     addErrorMessage(input);
                                 }
                             } else {
                                 input.classList.remove('error');
-                                form.classList.remove('invalid');
                                 removeErrorMessage(input);
                             }
                         };
@@ -180,10 +173,10 @@ export const validate = (formEl, callback) => {
             select.addEventListener('change', () => {
                 if (select.value === 'empty') {
                     select.classList.add('error');
-                    form.classList.add('invalid');
+                    addErrorMessage(select);
                 } else {
                     select.classList.remove('error');
-                    form.classList.remove('invalid');
+                    removeErrorMessage(select)
                 }
             });
         });
@@ -219,7 +212,7 @@ export const validate = (formEl, callback) => {
             forLoop(inputs.length, (i) => {
                 checkInputs(inputs[i]);
             });
-    
+            
             forLoop(textareas.length, (i) => {
                 checkInputs(textareas[i]);
             });

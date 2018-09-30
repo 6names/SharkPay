@@ -43,7 +43,7 @@ export const mobileSubNav = () => {
     
     const hideDropdown = (exit) => {
         exit.addEventListener('click', () => {
-           exit.parentElement.classList.remove('active');
+            exit.parentElement.classList.remove('active');
         });
     };
     
@@ -51,12 +51,12 @@ export const mobileSubNav = () => {
         forLoop(mobileDropdownTriggers.length, (i) => {
             const trigger = mobileDropdownTriggers[i];
             const target = trigger.dataset.target;
-    
+            
             trigger.addEventListener('click', () => {
                 forLoop(mobileDropdowns.length, (j) => {
                     const dropdown = mobileDropdowns[j];
                     const name = dropdown.dataset.name;
-        
+                    
                     if (target === name) {
                         dropdown.classList.add('active');
                         const mobileDropdownsTitle = document.querySelector('.header__mobile-dropdown-title');

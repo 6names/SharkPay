@@ -81,6 +81,31 @@ a {
     overflow: hidden;
 }
 
+// Page nav
+.page-nav {
+    position: relative;
+    z-index: 55;
+    
+    &__holder {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 55;
+        min-width: 320px;
+        max-width: 100%;
+        width: 100vw;
+        
+        &.fixed {
+            position: fixed;
+            
+            .faq__nav {
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
 // Site links
 .site-links {
     @include inner;

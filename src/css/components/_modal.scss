@@ -100,14 +100,29 @@
     }
     
     &__title {
-    
+        font-size: 23px;
+        margin-bottom: 20px;
     }
     
     &__text {
+        margin-bottom: 30px;
+        color: $lightColor;
         
         p {
             margin-top: 10px;
             margin-bottom: 10px;
+        }
+    }
+    
+    &__form {
+        textarea.textarea-field,
+        input.text-input {
+            background-color: rgba($lighterColor, 0.4);
+        }
+        
+        .orange-butn {
+            width: 100%;
+            max-width: 220px;
         }
     }
     
@@ -121,16 +136,21 @@
         margin-bottom: 20px;
         margin-left: auto;
         padding-top: 30px;
-        padding-right: 15px;
+        padding-right: 30px;
         padding-bottom: 40px;
-        padding-left: 15px;
+        padding-left: 30px;
         background-color: $white;
-        box-shadow: $shadow;
+        box-shadow: 0 1px 7px rgba($black, 0.4);
     }
     
     @media only screen and (max-width: 480px) {
         &__cell {
             padding: 0 10px;
+        }
+        
+        &__frame {
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }

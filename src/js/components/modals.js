@@ -1,4 +1,3 @@
-import {initInner} from "./initInner";
 import {forLoop, getXHR} from "./helpers";
 
 // Create modal holder
@@ -74,15 +73,14 @@ export const testModal = (target, callBack) => {
                     </div>
                 </div>
             </div>`;
-    
+        
         modalHolder.classList.add('modal-holder_active');
         document.body.classList.add('modal-open');
         document.body.style.paddingRight = getScrollBarWidth() + 'px';
         document.querySelector('.modal__frame').classList.add('active');
-    
-        initInner();
+        
         removeModal();
-    
+        
         if (callBack) {
             callBack(modalHolder);
         }
@@ -95,7 +93,7 @@ export const getModal = (callBack) => {
     forLoop(modalTriggers.length, (i) => {
         modalTriggers[i].addEventListener('click', function (e) {
             const target = e.currentTarget.getAttribute('data-target');
-        
+            
             getXHR(`modals/${target}.html`, (response) => {
                 modalHolder.innerHTML = `
                     <div class="modal" tabindex="-1">
@@ -106,19 +104,20 @@ export const getModal = (callBack) => {
                             </div>
                         </div>
                     </div>`;
-            
+                
                 modalHolder.classList.add('modal-holder_active');
                 document.body.classList.add('modal-open');
                 document.body.style.paddingRight = getScrollBarWidth() + 'px';
                 document.querySelector('.modal__frame').classList.add('active');
-            
-                initInner();
+                
                 removeModal();
-            
+                
                 if (callBack) {
                     callBack(modalHolder);
                 }
             });
+            
+            e.preventDefault();
         });
     });
 };

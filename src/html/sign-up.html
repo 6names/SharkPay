@@ -51,31 +51,31 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="input-line"><input class="text-input" id="first-name" name="firstName" type="text" placeholder="First Name"/></div>
-                                        <div class="input-line"><input class="text-input" id="last-name" name="lastName" type="text" placeholder="Last Name"/></div>
-                                        <div class="input-line"><input class="text-input" id="phone" name="phone" type="tel" placeholder="Phone"/></div>
+                                        <div class="input-line"><input class="text-input" id="first-name" name="firstName" type="text" placeholder="First Name" data-required="required" data-error-message="First Name is required"/></div>
+                                        <div class="input-line"><input class="text-input" id="last-name" name="lastName" type="text" placeholder="Last Name" data-required="required" data-error-message="Last Name is required"/></div>
+                                        <div class="input-line"><input class="text-input" id="phone" name="phone" type="tel" placeholder="Phone" data-required="required" data-error-message="Phone is required"/></div>
                                     </div>
         
                                     <div class="sign-up__form-column">
                                         <div class="input-line">
-                                            <select id="country" name="country" title="Country">
-                                                <option disabled>Country</option>
+                                            <select id="country" name="country" title="Country" data-error-message="Country is required">
+                                                <option value="empty">Country</option>
                                                 <option>USA</option>
                                                 <option>Russia</option>
                                                 <option>Ukraine</option>
                                             </select>
                                         </div>
-                                        <div class="input-line"><input class="text-input" id="company" name="company" type="text" placeholder="Company"/></div>
-                                        <div class="input-line"><input class="text-input" id="email" name="email" type="email" placeholder="E-mail"/></div>
-                                        <div class="input-line"><input class="text-input" id="site" name="site" type="url" placeholder="URL website"/></div>
+                                        <div class="input-line"><input class="text-input" id="company" name="company" type="text" placeholder="Company" data-required="required" data-error-message="Company is required"/></div>
+                                        <div class="input-line"><input class="text-input" id="email" name="email" type="email" placeholder="E-mail" data-required="required" data-error-message="E-mail is required"/></div>
+                                        <div class="input-line"><input class="text-input" id="site" name="site" type="url" placeholder="URL website" data-required="required" data-error-message="URL website is required"/></div>
                                     </div>
         
                                     <button class="orange-butn" type="submit">Save</button>
                                 </form>
                                 
-                                <div class="sign-up__errors visually-hidden">
+                                <div class="sign-up__errors form-errors visually-hidden">
                                     <div class="sign-up__errors-title">Please Fix These Errors:</div>
-                                    <div class="sign-up__errors-list"></div>
+                                    <div class="sign-up__errors-list form-errors__list"></div>
                                 </div>
                             </div>
                         </div>

@@ -41,7 +41,7 @@
                                     <div class="sign-up__form-column">
                                         <div class="input-line">
                                             <label class="input-label" for="type">Contact type*</label>
-                                            <select id="type" name="type" title="Contact type">
+                                            <select id="type" name="type" title="Contact type" data-error-message="Contact type is required">
                                                 <option value="empty">-- Choose one --</option>
                                                 <option>Help</option>
                                                 <option>Feedback</option>
@@ -49,11 +49,11 @@
                                         </div>
                                         <div class="input-line">
                                             <label class="input-label" for="company">Your Company Reference</label>
-                                            <input class="text-input" id="company" name="company" type="text" placeholder="Company"/>
+                                            <input class="text-input" id="company" name="company" type="text" placeholder="Company" data-required="required" data-error-message="Company Reference is required"/>
                                         </div>
                                         <div class="input-line">
                                             <label class="input-label" for="country">Headquarters location</label>
-                                            <select id="country" name="country" title="Country">
+                                            <select id="country" name="country" title="Country" data-error-message="Country is required">
                                                 <option value="empty">Country</option>
                                                 <option>USA</option>
                                                 <option>Russia</option>
@@ -65,7 +65,7 @@
                                     <div class="sign-up__form-column">
                                         <div class="input-line">
                                             <label class="input-label" for="reference">Already have your company reference?</label>
-                                            <select id="reference" name="reference" title="Already have your company reference?">
+                                            <select id="reference" name="reference" title="Already have your company reference?" data-error-message="Reference type is required">
                                                 <option value="empty">-- Choose one --</option>
                                                 <option>Yes</option>
                                                 <option>No</option>
@@ -74,12 +74,12 @@
                                         
                                         <div class="input-line">
                                             <label class="input-label" for="email">E-mail</label>
-                                            <input class="text-input" id="email" name="email" type="email" placeholder="E-mail"/>
+                                            <input class="text-input" id="email" name="email" type="email" placeholder="E-mail" data-required="required" data-error-message="E-mail is required"/>
                                         </div>
     
                                         <div class="input-line">
                                             <label class="input-label" for="request">Request type</label>
-                                            <select id="request" name="request" title="Request type">
+                                            <select id="request" name="request" title="Request type" data-error-message="Request type is required">
                                                 <option value="empty">-- Choose one --</option>
                                                 <option>Help</option>
                                                 <option>Feedback</option>
@@ -100,10 +100,10 @@
                                         <a href="#" class="modal-trigger" data-target="register-modal">need to register?</a>
                                     </div>
                                 </form>
-                                
-                                <div class="sign-up__errors visually-hidden">
+    
+                                <div class="sign-up__errors form-errors visually-hidden">
                                     <div class="sign-up__errors-title">Please Fix These Errors:</div>
-                                    <div class="sign-up__errors-list"></div>
+                                    <div class="sign-up__errors-list form-errors__list"></div>
                                 </div>
                             </div>
                         </div>
