@@ -20,14 +20,11 @@
         cursor: pointer;
         transition: all 0.2s;
     
-        &:before {
-            content: '';
-            display: block;
+        .icon-cross {
             width: 18px;
             height: 18px;
-            background-image: $crossBg;
             margin-right: 20px;
-            background-size: 100%;
+            fill: $theme;
             transform: rotate(135deg);
             transition: all 0.3s;
         }
@@ -38,8 +35,8 @@
     
         &.active {
             color: $theme;
-            
-            &:before {
+    
+            .icon-cross {
                 transform: rotate(0deg);
             }
         }

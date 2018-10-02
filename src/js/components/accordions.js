@@ -1,4 +1,4 @@
-import {forLoop} from "./helpers";
+import {createIcon, forLoop} from "./helpers";
 
 export const accordion = (triggers, contents, parent) => {
     if (!parent) {
@@ -6,8 +6,12 @@ export const accordion = (triggers, contents, parent) => {
     }
     
     const trigger = parent.querySelectorAll(triggers);
+    
     const content = parent.querySelectorAll(contents);
     forLoop(trigger.length, (i) => {
+        const cross = createIcon('icon-cross');
+        if (trigger[i].classList.contains('accordion__title')) trigger[i].insertAdjacentElement('afterbegin', cross);
+        
         trigger[i].addEventListener('click', () => {
             if (trigger[i].classList.contains('active')) {
                 trigger[i].classList.remove('active');

@@ -42,11 +42,15 @@
     }
     
     &__slider {
-        position: relative;
-        display: flex;
-        border-radius: 4px;
         margin-bottom: 52px;
-        flex-wrap: wrap;
+    
+        &-frame {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 4px;
+            overflow: hidden;
+        }
         
         &-holder {
             position: relative;
@@ -89,10 +93,6 @@
             padding-bottom: 20px;
             padding-left: 40px;
             color: $color;
-            
-            &:not(.active) {
-                @include visually-hidden;
-            }
         }
         
         &-title {
@@ -195,7 +195,9 @@
         }
     
         &__slider {
-            display: block;
+            &-frame {
+                display: block;
+            }
             
             &-holder {
                 width: 100%;

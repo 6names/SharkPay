@@ -420,16 +420,27 @@ html:not(.mobile) {
             &-list {
                 opacity: 0;
                 transform: translate3d(0, 20px, 0);
-                transition: all 1s;
+                transition: all 1s 0.5s;
             }
             
             &-title {
                 opacity: 0;
                 transform: translate3d(20px, 0, 0);
-                transition: all 1s 0.5s;
+                transition: all 1s 1s;
+            }
+    
+            &-holder svg {
+                opacity: 0;
+                transform: translate3d(-50%, -50%, 0) scale(0);
+                transition: all 1s 1.3s;
             }
             
-            &-text.active {
+            .tns-slide-active {
+                .security__slider-holder svg {
+                    opacity: 1;
+                    transform: translate3d(-50%, -50%, 0) scale(1);
+                }
+                
                 .security__slider-list,
                 .security__slider-title {
                     opacity: 1;

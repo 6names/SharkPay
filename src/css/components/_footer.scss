@@ -134,6 +134,12 @@
         color: $lighterColor;
     }
     
+    &__license {
+        &:hover {
+            color: $theme;
+        }
+    }
+    
     &__copyright {
         grid-area: copyright;
     }

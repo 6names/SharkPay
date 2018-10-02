@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Sliders
-    initSlider('.security__slider-images', '.security__slider', '.security__slider-content');
+    initSlider('.security__slider-initial', '.security__slider');
     
     // Forms
     validate('#sign-up-form', (e) => {
